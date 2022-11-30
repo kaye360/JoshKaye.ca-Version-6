@@ -71,6 +71,7 @@
   color : #F16161;
   font-weight: 700;
   transition : all 200ms cubic-bezier(.28,1.09,.77,.91);
+  
 }
 
 .hero-cta-link a:hover,
