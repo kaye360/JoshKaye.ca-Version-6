@@ -1,0 +1,19 @@
+.main-header-wrapper {
+  position: fixed;
+  z-index : 9999;
+  inset : 0;
+  pointer-events: none;
+}
+
+.main-header {
+  position: relative;
+  max-width: 1200px;
+  min-height : 100vh;
+  margin-inline : auto;
+}
+
+.logo{
+  position: absolute;
+  top : 2rem;
+  left : 175px;
+}

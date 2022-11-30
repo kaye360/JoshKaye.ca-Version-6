@@ -1,0 +1,60 @@
+
+
+.hero-nav ul {
+  position : absolute;
+  z-index : 9999;
+  right : 1rem;
+  top : 40%;
+  transform: translateY(-50%);
+  display : flex;
+  flex-direction: column;
+  gap : 1.5rem;
+  pointer-events: all;
+}
+
+.hero-nav li a {
+  position: relative;
+  z-index : 99999;
+  padding-inline : 5px;
+  
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-nav li a:hover,
+.hero-nav li a:focus {
+  color : #F16161;
+}
+
+.hero-nav li a::before {
+  content: '';
+  position: absolute;
+  inset : 0 auto 0 0;
+  width : 0%;
+  z-index: -1;
+  background-color: #111;
+  transition : width 500ms cubic-bezier(.28,1.09,.77,.91);
+}
+
+.hero-nav li a:hover::before,
+.hero-nav li a:focus::before {
+  width : 100%;
+}
+
+.hero-nav li a::after {
+  content: '';
+  position: absolute;
+  inset : 100% 0 -6px auto;
+  width : 0%;
+  background-color : #F16161;
+  transition : width 500ms cubic-bezier(.28,1.09,.77,.91);
+}
+
+.hero-nav li a:hover::after,
+.hero-nav li a:focus::after {
+  width : 100%;
+}
