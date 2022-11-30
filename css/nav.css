@@ -3,8 +3,8 @@
 .hero-nav ul {
   position : absolute;
   z-index : 9999;
-  right : 1rem;
   top : 40%;
+  right : 1rem;
   transform: translateY(-50%);
   display : flex;
   flex-direction: column;
@@ -12,11 +12,23 @@
   pointer-events: all;
 }
 
+.hero-nav::before {
+  content : '';
+  position: absolute;
+  top : 20%;
+  right : 8rem;
+  z-index : 1;
+  transform: translateY(-50%s);
+  background-color:  hsl(220, 36%, 90%);
+  width : 150px;
+  height : 150px;
+}
+
 .hero-nav li a {
   position: relative;
   z-index : 99999;
   padding-inline : 5px;
-  
+
   font-size: 2rem;
   font-weight: 900;
   letter-spacing: 0.2rem;

@@ -1,6 +1,6 @@
 .main-header-wrapper {
   position: fixed;
-  z-index : 9999;
+  z-index : 110;
   inset : 0;
   pointer-events: none;
 }
@@ -10,6 +10,9 @@
   max-width: 1200px;
   min-height : 100vh;
   margin-inline : auto;
+  background-image: url(../img/bg/circles.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 .logo{
