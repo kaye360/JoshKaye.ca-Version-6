@@ -1,11 +1,12 @@
 
 
-.hero-nav ul {
-  position : absolute;
-  z-index : 9999;
-  top : 40%;
-  right : 1rem;
+.hero-nav {
+  position: absolute;
+  inset : 42% 1rem auto auto;
   transform: translateY(-50%);
+}
+
+.hero-nav ul {
   display : flex;
   flex-direction: column;
   gap : 1.5rem;
@@ -14,21 +15,22 @@
 
 .hero-nav::before {
   content : '';
-  position: absolute;
-  top : 20%;
-  right : 8rem;
-  z-index : 1;
-  transform: translateY(-50%s);
+
+  position : absolute;
+  inset : 0 auto auto 0;
+  z-index: -1;
+
+  transform: translateY(-40%) translateX(-10%);
   background-color:  hsl(220, 36%, 90%);
   width : 150px;
   height : 150px;
 }
 
 .hero-nav li a {
-  position: relative;
-  z-index : 99999;
+  position : relative;
   padding-inline : 5px;
 
+  color : hsl(220, 35%, 0%);
   font-size: 2rem;
   font-weight: 900;
   letter-spacing: 0.2rem;

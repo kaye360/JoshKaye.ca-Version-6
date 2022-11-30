@@ -1,22 +1,193 @@
+
+/* Layering */
+
+.hero-bg { z-index : 1; }
+.hero-bg-video video { z-index : 20; }
+.hero-bg-image img { z-index : 30; }
+.logo { z-index: 40;}
+.socials { z-index: 40; }
+.hero-intro { z-index: 40; }
+.hero-down-button { z-index: 40; }
+
+
+
+
+/* Hero Wrapper */
 .main-header-wrapper {
+
+  --hero-content-left : 175px;
+
   position: fixed;
-  z-index : 110;
   inset : 0;
-  pointer-events: none;
+  min-height : 100vh;
+  max-height : 1000px;
 }
 
 .main-header {
   position: relative;
   max-width: 1200px;
-  min-height : 100vh;
   margin-inline : auto;
+  min-height : 100vh;
+  max-height : 1000px;
+
   background-image: url(../img/bg/circles.svg);
   background-repeat: no-repeat;
   background-position: right center;
 }
 
+
+
+/* Hero Elements in order LTR */
+
+
+
+/* Background */
+
+.hero-bg {
+  position: absolute;
+  inset : 0 auto;
+
+  width : 50%;
+  height : 100vh;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);;
+}
+
+.hero-bg-video video {
+  position: absolute;
+  inset : 0;
+
+  height : 100vh;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.hero-bg-image img {
+  position: absolute;
+  inset : 0;
+  min-height : 100vh;
+  transform: rotate(10deg) scale(1.3);
+  
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+}
+
+/* Logo */
+
 .logo{
   position: absolute;
-  top : 2rem;
-  left : 175px;
+  inset : 2rem auto auto var(--hero-content-left);
+
+  font-family: 'Sharp Grotesk';
+  font-size: 2rem;
+  color : #eee;
+}
+
+/* Socials */
+
+.socials {
+  position : absolute;
+  inset : 20% auto 0 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap : 1.2rem;
+  width : 75px;
+  padding-block : 1rem;
+
+  background-color: #eee;
+}
+
+.socials-heading {
+  min-height: max-content;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  transform: rotate(180deg);
+}
+
+/* Hero Intro */
+
+.hero-intro {
+  position: absolute;
+  inset : 42% auto auto var(--hero-content-left);
+  transform: translateY(-50%);
+}
+
+.hero-intro span {
+  position: relative;
+  display : block;
+  padding : 0.5rem;
+  margin-block : 1rem;
+  width : max-content;
+  background-color: #000;
+
+}
+
+.hero-intro span::before {
+  content: '';
+  position: absolute;
+  inset : 0;
+  z-index: -1;
+  transform: translateX(0.5rem) translateY(0.5rem);
+  background-color: #314468;
+}
+
+/* Nav */
+
+/* 
+See nav.css 
+*/
+
+/* Hero Down Button */
+
+.hero-down-button {
+  position: absolute;
+  inset : auto auto 20% var(--hero-content-left);
+  transform: translateY(50%);
+}
+
+/* Hero Call to Action */
+
+.hero-cta {
+  position: absolute;
+  inset : auto 0 20% 0;
+  transform: translateY(50%);
+
+  display : flex;
+  justify-content: end;
+  align-items: center;
+  background-color: #EEF1F7;
+}
+
+.hero-cta-intro {
+  padding : 1rem;
+  font-weight: 700;
+}
+
+.hero-cta-link {
+  overflow: hidden;
+}
+
+.hero-cta-link a {
+  display : block;
+  padding : 2rem;
+  height : 100%;
+  pointer-events: all;
+  color : #F16161;
+  font-weight: 700;
+  transition : all 200ms cubic-bezier(.28,1.09,.77,.91);
+
+}
+
+.hero-cta-link a:hover,
+.hero-cta-link a:focus {
+  background-color: hsl(219, 36%, 10%);
+  color : #fff;
+}
+
+.hero-cta-primary {
+  border-left : 1px solid #333;
+  border-right : 1px solid #333;
 }

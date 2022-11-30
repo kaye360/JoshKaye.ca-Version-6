@@ -3,7 +3,10 @@
 @import './config.css';
 @import './global.css';
 @import './utils.css';
-@import './nav.css';
 @import './header.css';
-@import './socials.css';
-@import './hero.css';
+@import './nav.css';
+
+@font-face {
+  font-family: 'Sharp Grotesk';
+  src: url(../font/SharpGrotesk-sb.ttf);
+}
