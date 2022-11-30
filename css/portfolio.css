@@ -1,0 +1,8 @@
+
+.portfolio {
+  position: relative;
+  z-index : 1;
+  margin-top : 25vh;
+  min-height: 100vh;
+  /* background-color: antiquewhite; */
+}

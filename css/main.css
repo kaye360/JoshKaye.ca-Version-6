@@ -5,6 +5,7 @@
 @import './utils.css';
 @import './header.css';
 @import './nav.css';
+@import './portfolio.css';
 
 @font-face {
   font-family: 'Sharp Grotesk';

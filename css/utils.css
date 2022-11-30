@@ -121,13 +121,14 @@
 /* Container Classes */
 .container-ex-sm, .container-sm, .container, .container-lg {
     position: relative;
+    z-index: 1;
     margin-inline : auto;
     padding : var(--padding-x-default);
 }
 
 /* .container-ex-sm { max-width : var(--width-ex-small); } */
 /* .container-sm { max-width : var(--width-small); } */
-.container { max-width : 1000px; }
+.container { max-width : 1200px; }
 /* .container-lg { max-width : var(--width-large); } */
 
 .full-height { min-height : 100vh; }

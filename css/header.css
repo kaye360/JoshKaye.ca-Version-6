@@ -1,7 +1,8 @@
 
 /* Layering */
 
-.hero-bg { z-index : 1; }
+.main-header-wrapper { z-index: 5; }
+.hero-bg { z-index : 5; }
 .hero-bg-video video { z-index : 20; }
 .hero-bg-image img { z-index : 30; }
 .logo { z-index: 40;}
@@ -13,9 +14,20 @@
 
 
 /* Hero Wrapper */
+
+.header-observer {
+  height : 25vh;
+  margin-bottom : 35vh;
+  /* background-color: antiquewhite; */
+}
+
+.main-header-wrapper-hidden {
+  display: none;
+}
+
 .main-header-wrapper {
 
-  --hero-content-left : 175px;
+  --hero-content-left : 15%;
 
   position: fixed;
   inset : 0;
@@ -30,6 +42,7 @@
   min-height : 100vh;
   max-height : 1000px;
 
+  background-color: hsl(0, 0%, 97%);
   background-image: url(../img/bg/circles.svg);
   background-repeat: no-repeat;
   background-position: right center;
@@ -97,7 +110,7 @@
   width : 75px;
   padding-block : 1rem;
 
-  background-color: #eee;
+  background-color: hsl(219, 36%, 95%);
 }
 
 .socials-heading {
@@ -190,4 +203,63 @@ See nav.css
 .hero-cta-primary {
   border-left : 1px solid #333;
   border-right : 1px solid #333;
+}
+
+
+
+
+/* Header Animations */
+
+/* 
+-tx classes are for elements that have initially set transforms of -50%
+*/
+
+.main-header-wrapper             .hero-bg    { animation: var(--spring-up); animation-delay: 0ms;}
+.main-header-wrapper             .socials    { animation: var(--spring-up); animation-delay: 150ms;}
+.main-header-wrapper             .hero-cta   { animation: var(--spring-up); animation-delay: 150ms; }
+.main-header-wrapper             .hero-intro { animation: var(--spring-up-tx); animation-delay: 300ms; }
+.main-header-wrapper       .hero-down-button { animation: var(--spring-up); animation-delay: 300ms; }
+.main-header-wrapper             .main-nav   { animation: var(--spring-up-tx); animation-delay: 450ms; }
+.main-header-wrapper             .logo       { animation: var(--spring-up); animation-delay: 600ms; }
+
+.main-header-wrapper-is-closing :is(
+  .hero-bg, .socials, .hero-cta, .logo, .hero-down-button) { 
+    animation: var(--spring-down); 
+}
+
+.main-header-wrapper-is-closing :is(
+  .hero-intro, .main-nav ) {
+    animation: var(--spring-down-tx);
+}
+
+/* Need this in order to see the next section properly */
+.main-header-wrapper-is-closing .main-header {
+  background-color: transparent;
+}
+
+:root {
+  --spring-up : spring-up 550ms cubic-bezier(.28,1.09,.77,.91) both;
+  --spring-up-tx : spring-up-tx 550ms cubic-bezier(.28,1.09,.77,.91) both;
+  --spring-down : spring-down 550ms cubic-bezier(.28,1.09,.77,.91) both;
+  --spring-down-tx : spring-down-tx 550ms cubic-bezier(.28,1.09,.77,.91) both;
+}
+
+@keyframes spring-up {
+  from { opacity: 0; transform: translateY(2rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spring-up-tx {
+  from { opacity: 0; transform: translateY(-40%); }
+  to   { opacity: 1; transform: translateY(-50%); }
+}
+
+@keyframes spring-down {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-2rem); }
+}
+
+@keyframes spring-down-tx {
+  from { opacity: 1; transform: translateY(-50%); }
+  to { opacity: 0; transform: translateY(-70%); }
 }
