@@ -1,0 +1,48 @@
+
+:root {
+  --spring-up : spring-up 550ms var(--cubic-bez) both;
+  --spring-down : spring-down 250ms var(--cubic-bez) both;
+}
+
+
+/* Nav Animations */
+.main-nav {
+  animation: var(--spring-up);
+}
+
+/* Hero Animations IN */
+.body-state-hero :is(
+  .hero-bg, .socials-wrapper, .hero-cta-wrapper, .hero-intro-wrapper
+) {
+  animation: var(--spring-up);
+}
+
+.body-state-hero .hero-bg            { animation-delay: 000ms; }
+.body-state-hero .hero-intro-wrapper { animation-delay: 100ms; }
+.body-state-hero .hero-cta-wrapper   { animation-delay: 200ms; }
+.body-state-hero .socials-wrapper    { animation-delay: 300ms; }
+
+/* Hero Animations OUT */
+.body-state-to-content :is(
+  .hero-bg, .socials-wrapper, .hero-cta-wrapper, .hero-intro-wrapper 
+) { 
+  animation: var(--spring-down); 
+}
+
+/* Need this in order to see the next section properly */
+.body-state-to-content .main-header {
+  background-color: transparent;
+} 
+
+
+/* Animation Frames */
+
+@keyframes spring-up {
+  from { opacity: 0; transform: translateY(2rem) translateX(-50%); }
+  to   { opacity: 1; transform: translateY(0)    translateX(-50%); }
+}
+
+@keyframes spring-down {
+  from { opacity: 1; transform: translateY(0)     translateX(-50%) scale(1); }
+  to   { opacity: 0; transform: translateY(-2rem) translateX(-50%) scale(0.8); }
+}

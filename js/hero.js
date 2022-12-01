@@ -1,9 +1,7 @@
 // Show/Hide Hero on scroll
 
-const headerObserverDiv = document.querySelector('.header-observer')
-const hero = document.querySelector('.main-header-wrapper')
-
-
+const heroObserverDiv = document.querySelector('.hero-observer')
+const body = document.querySelector('body')
 
 const navOptions = {
     root : null,
@@ -11,22 +9,22 @@ const navOptions = {
     rootMargin : "0px 0px 0px 0px"
 }
 
-const headerObserver = new IntersectionObserver( function(entries) {
+const bodyObserver = new IntersectionObserver( function(entries) {
   entries.forEach(entry => {
       if(entry.isIntersecting) {
-        hero.classList.remove('main-header-wrapper-hidden')
-        hero.classList.add('main-header-wrapper')
+        body.classList.remove('body-state-content')
+        body.classList.add('body-state-hero')
       } else {
-        hero.classList.add('main-header-wrapper-is-closing')
+        body.classList.add('body-state-to-content')
         setTimeout( () => {
-          hero.classList.remove('main-header-wrapper-is-closing')
-          hero.classList.remove('main-header-wrapper')
-          hero.classList.add('main-header-wrapper-hidden')
+          body.classList.remove('body-state-hero')
+          body.classList.remove('body-state-to-content')
+          body.classList.add('body-state-content')
         }, 550)
       }
       
   })
 }, navOptions)
 
-headerObserver.observe(headerObserverDiv)
+bodyObserver.observe(heroObserverDiv)
 

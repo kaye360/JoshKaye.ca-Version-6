@@ -1,19 +1,116 @@
 
 
-.hero-nav {
-  position: absolute;
-  inset : 42% 1rem auto auto;
-  transform: translateY(-50%);
+/* 
+Nav element properties for all states
+body-state-hero
+body-state-content
+body-state-mobile-menu
+*/
+
+/* <nav> nav wrapper */
+.main-nav {
+  position: fixed;
+  inset : 0 auto auto 50%;
+  transform: translateX(-50%);
+
+  width : 100%;
+  max-width : 1200px;
+  padding : 0 2vw;
+  display :flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.hero-nav ul {
+/* logo */
+.logo { 
+  font-family: 'Sharp Grotesk';
+  font-size: var(--font-size-4);
+  letter-spacing: 0.1rem;
+  color : #eee;
+  transition: all 150ms var(--cubic-bez);
+}
+
+.body-state-content
+.logo {
+  padding : 0rem 1rem;
+  background-color: #333;
+}
+
+
+
+
+
+@media screen and (max-width : 699px) {
+ 
+/* Normal State */
+.main-nav {
+  padding : 0.5rem 2vw;
+}
+
+/* logo */
+.body-state-hero
+.logo {
+  margin : 1rem auto auto 2vw;
+}
+
+/* menu ul */
+.menu {
+  display: none;
+  border : 1px solid
+}
+
+/* mobile menu button */
+.mobile-menu-btn {
+  border : 0;
+  outline : 0;
+  background: none;
+}
+
+} /* END @media max-width : 699px */
+
+
+
+
+
+
+@media screen and (min-width : 700px) {
+  
+
+/* logo */
+.body-state-hero
+.logo,
+.body-state-to-content
+.logo {
+  margin : 2rem auto auto 150px;
+}
+
+/* menu ul  */
+.menu { 
   display : flex;
-  flex-direction: column;
-  gap : 1.5rem;
-  pointer-events: all;
+  flex-wrap: wrap;
+  gap : 1rem;
+  transition: all 250ms var(--cubic-bez); 
 }
 
-.hero-nav::before {
+.body-state-hero
+.menu,
+.body-state-to-content
+.menu {
+  position: relative;
+  margin-top : 20vh;
+  flex-direction: column;
+}
+
+.body-state-content
+.menu {
+  margin-top : 1rem;
+  justify-content: end;
+  flex-direction: row;
+  max-width: 450px;
+}
+
+.body-state-hero
+.menu::before {
   content : '';
 
   position : absolute;
@@ -21,30 +118,45 @@
   z-index: -1;
 
   transform: translateY(-40%) translateX(-10%);
-  background-color:  hsl(220, 36%, 90%);
+  background-color:  hsl(220, 36%, 94%);
   width : 150px;
   height : 150px;
 }
 
-.hero-nav li a {
+/* mobile menu button */
+.mobile-menu-btn {
+  display : none;
+}
+
+}  /* END @media (min-width 750px) */
+
+
+
+
+
+
+/* 
+Nav Styles Consistent across all states (hero, content, mobile) 
+*/
+.main-nav li a {
   position : relative;
   padding-inline : 5px;
 
   color : hsl(220, 35%, 0%);
-  font-size: 2rem;
+  font-size: var(--font-size-2);
   font-weight: 900;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.15rem;
   text-transform: uppercase;
   -webkit-text-stroke-width: 1px;
   -webkit-text-fill-color: transparent;
 }
 
-.hero-nav li a:hover,
-.hero-nav li a:focus {
+.main-nav li a:hover,
+.main-nav li a:focus {
   color : #F16161;
 }
 
-.hero-nav li a::before {
+.main-nav li a::before {
   content: '';
   position: absolute;
   inset : 0 auto 0 0;
@@ -54,12 +166,12 @@
   transition : width 500ms cubic-bezier(.28,1.09,.77,.91);
 }
 
-.hero-nav li a:hover::before,
-.hero-nav li a:focus::before {
+.main-nav li a:hover::before,
+.main-nav li a:focus::before {
   width : 100%;
 }
 
-.hero-nav li a::after {
+.main-nav li a::after {
   content: '';
   position: absolute;
   inset : 100% 0 -6px auto;
@@ -68,7 +180,7 @@
   transition : width 500ms cubic-bezier(.28,1.09,.77,.91);
 }
 
-.hero-nav li a:hover::after,
-.hero-nav li a:focus::after {
+.main-nav li a:hover::after,
+.main-nav li a:focus::after {
   width : 100%;
 }
