@@ -7,6 +7,11 @@ body-state-content
 body-state-mobile-menu
 */
 
+
+
+/* Global */
+
+
 /* <nav> nav wrapper */
 .main-nav {
   position: fixed;
@@ -37,6 +42,9 @@ body-state-mobile-menu
 }
 
 
+
+
+/* Mobile */
 
 
 
@@ -71,6 +79,9 @@ body-state-mobile-menu
 
 
 
+
+
+/* Tablet/Desktop */
 
 
 @media screen and (min-width : 700px) {
@@ -134,10 +145,37 @@ body-state-mobile-menu
 
 
 
+/* Mobile Menu is clicked */
+
+.mobile-menu-is-clicked .menu {
+  position: fixed;
+  inset : 10vh 0 auto 0;
+  z-index : 100;
+
+  width : 100vw;
+  height : 90vh;
+  padding-right : 2vw;
+  display : flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: end;
+  
+  background-color: hsl(0, 0%, 20%, 0.99);
+}
+
+.mobile-menu-is-clicked .menu li a {
+  font-size: var(--font-size-5);
+  color :hsl(0, 90%, 80%);
+
+}
+
+
+
 
 /* 
 Nav Styles Consistent across all states (hero, content, mobile) 
 */
+
 .main-nav li a {
   position : relative;
   padding-inline : 5px;

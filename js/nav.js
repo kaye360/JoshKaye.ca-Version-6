@@ -1,13 +1,14 @@
 
-const mobileMenu = document.querySelector('.main-nav ul')
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn')
 
+console.log(body)
+
 mobileMenuBtn.addEventListener('click', () => {
-  if( mobileMenu.classList.contains('mobile-menu-is-clicked') ) {
-    mobileMenu.classList.add('mobile-menu-is-hidden')
-    mobileMenu.classList.remove('mobile-menu-is-clicked')
+  if( body.classList.contains('mobile-menu-is-clicked') ) {
+    body.classList.add('mobile-menu-is-hidden')
+    body.classList.remove('mobile-menu-is-clicked')
   } else {
-    mobileMenu.classList.add('mobile-menu-is-clicked')
-    mobileMenu.classList.remove('mobile-menu-is-hidden')
+    body.classList.add('mobile-menu-is-clicked')
+    body.classList.remove('mobile-menu-is-hidden')
   }
 })
