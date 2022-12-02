@@ -20,7 +20,7 @@
 .hero-observer {
   position: relative;
   z-index: -1;
-  height : 35vh;
+  height : 25vh;
   margin-bottom : 35vh;
 }
 
@@ -133,55 +133,86 @@ Hero Elements in order LTR
 /* Socials */
 
 
+/* Global */
 .socials-wrapper {
   position: fixed;
   left : -200%;
 }
 
-.body-state-content
-.socials-wrapper {
-  display : none;
-}
-
-
-@media screen and (min-width : 700px) {
-
-.body-state-hero
-.socials-wrapper {
-  inset : auto auto 0 50%;
-  transform: translateX(-50%);
-
-  width : 100%;
-  max-width: var(--width-default);
-}
-
-.body-state-hero
 .socials {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  gap : 1.2rem;
-  
-  width : 75px;
-
-  padding-block : 1rem;
-
-  background-color: hsl(219, 36%, 95%);
-}
-
-
-.body-state-hero
-.socials-heading {
-  min-height: max-content;
-  writing-mode: vertical-lr;
-  text-transform: uppercase;
-  transform: rotate(180deg);
-}
-
-.socials-icon {
   pointer-events: all;
 }
+
+/* Mobile */
+@media screen and (max-width : 699px) {
+  
+  .mobile-menu-is-clicked .socials-wrapper {
+    inset : 0 auto 0 0;
+    z-index : 230;
+  }
+
+  .mobile-menu-is-clicked .socials {
+    height : 100vh;
+    padding : 1rem;
+    display : flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap : 2rem;
+    background-color: hsl(219, 36%, 95%);
+  }
+
+  .mobile-menu-is-clicked .socials-heading {
+    min-height: max-content;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    transform: rotate(180deg);
+  }
+}
+
+/* Desktop/Tablet */
+@media screen and (min-width : 700px) {
+
+  .body-state-hero
+  .socials-wrapper {
+    inset : auto auto 0 50%;
+    transform: translateX(-50%);
+
+    width : 100%;
+    max-width: var(--width-default);
+  }
+
+  .body-state-content .socials-wrapper {
+    display : none;
+  }
+
+  .body-state-hero
+  .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap : 1.2rem;
+    
+    width : 75px;
+
+    padding-block : 1rem;
+
+    background-color: hsl(219, 36%, 95%);
+  }
+
+
+  .body-state-hero
+  .socials-heading {
+    min-height: max-content;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    transform: rotate(180deg);
+  }
+
+  .socials-icon {
+    pointer-events: all;
+  }
 
 } /* END @media min width */
 

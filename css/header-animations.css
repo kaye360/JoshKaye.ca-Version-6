@@ -5,16 +5,40 @@
 }
 
 
-/* Nav Animations */
-.main-nav {
-  animation: var(--spring-up);
+
+
+/* Nav Desktop/Tablet Animations */
+@media screen and (min-width : 700px) {
+  .main-nav { animation: var(--spring-up);}
 }
+
+
+
+
+/* Menu Mobile Animation */
+@media screen and (max-width : 699px) {
+  .mobile-menu-is-clicked .menu {
+    animation : slide-left 250ms var(--cubic-bez) both;
+  }
+
+  .mobile-menu-is-clicked .socials-wrapper {
+    animation: slide-right 250ms var(--cubic-bez) both;
+  }
+}
+
+
+
 
 /* Hero Animations IN */
 .body-state-hero :is(
-  .hero-bg, .socials-wrapper, .hero-cta-wrapper, .hero-intro-wrapper
+  .hero-bg, .hero-cta-wrapper, .hero-intro-wrapper
 ) {
   animation: var(--spring-up);
+}
+
+@media screen and (min-width : 700px) {
+  /* In media query due to mobile nave conflict */
+  .socials-wrapper { animation: var(--spring-up); }
 }
 
 .body-state-hero .hero-bg            { animation-delay: 000ms; }
@@ -24,15 +48,22 @@
 
 /* Hero Animations OUT */
 .body-state-to-content :is(
-  .hero-bg, .socials-wrapper, .hero-cta-wrapper, .hero-intro-wrapper 
+  .hero-bg, .hero-cta-wrapper, .hero-intro-wrapper 
 ) { 
   animation: var(--spring-down); 
+}
+
+@media screen and (min-width : 700px) {
+  /* In media query due to mobile nave conflict */
+  .socials-wrapper { animation: var(--spring-down); }
 }
 
 /* Need this in order to see the next section properly */
 .body-state-to-content .main-header {
   background-color: transparent;
 } 
+
+
 
 
 /* Animation Frames */
@@ -45,4 +76,14 @@
 @keyframes spring-down {
   from { opacity: 1; transform: translateY(0)     translateX(-50%) scale(1); }
   to   { opacity: 0; transform: translateY(-2rem) translateX(-50%) scale(0.8); }
+}
+
+@keyframes slide-left {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity : 1; }
+}
+
+@keyframes slide-right {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity : 1; }
 }

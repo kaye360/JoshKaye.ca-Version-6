@@ -1,7 +1,6 @@
 
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn')
-
-console.log(body)
+const navLinks = document.querySelectorAll('.nav-link')
 
 mobileMenuBtn.addEventListener('click', () => {
   if( body.classList.contains('mobile-menu-is-clicked') ) {
@@ -12,3 +11,9 @@ mobileMenuBtn.addEventListener('click', () => {
     body.classList.remove('mobile-menu-is-hidden')
   }
 })
+
+navLinks.forEach( link => {
+  link.addEventListener('click', () => {
+    body.classList.remove('mobile-menu-is-clicked')
+  })
+} )
