@@ -38,7 +38,6 @@ p {
 }
 
 a {
-  /* color : hsl( var(--link-clr) ); */
   text-decoration: none;
 }
 
@@ -46,16 +45,24 @@ a:hover, a:focus {
   color : hsl( var(--link-hover-clr) );
 }
 
+button {
+  border : 0;
+  outline : 0;
+  background: none;
+}
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   font-family: 'Sharp Grotesk', Poppins, Helvetica, sans-serif;
 }
 
 h1 {
-  color : #BAC6DE;
+  color : #80D1FF;
+  letter-spacing: 0.2rem;
+  font-size : var(--font-size-4);
   letter-spacing: 0.3rem;
-  font-size : var(--font-size-5);
+  line-height: var(--font-size-4);
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 h2 {

@@ -9,7 +9,7 @@
   <script src="./js/hero.js" defer></script>
   <script src="./js/nav.js" defer></script>
 </head>
-<body>
+<body class="">
 
 
 
@@ -18,24 +18,22 @@
 <a href="#content" id="skip">Skip to content</a>
 
 
-<div id="home" class="hero-observer"></div>
-
-
 
 
 <nav class="main-nav">
 
   <div class="logo">
-    JOSHKAYE.CA
+    <a href="#home" class="logo-link">
+      JOSHKAYE.CA
+    </a>
   </div>
   
-  <button class="mobile-menu-btn">
-  </button>
+  <button class="mobile-menu-btn">|||</button>
 
   <ul class="menu">
     <li><a href="#home"      class="nav-link">Home</a></li>
-    <li><a href="#portfolio" class="nav-link">My Work</a></li>
-    <li><a href="#about"     class="nav-link">About Me</a></li>
+    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+    <li><a href="#about"     class="nav-link">About</a></li>
     <li><a href="#hire-me"   class="nav-link">Hire Me</a></li>
     <li><a href="#contact"   class="nav-link">Contact</a></li>
   </ul>
@@ -44,7 +42,99 @@
 
 
 
-<div class="socials-wrapper">
+
+<div class="hero-wrapper" id="home">
+
+
+  <div class="hero-heading-wrapper">
+
+    <div class="hero-main-heading">
+      <span class="hero-main-heading-small">
+        Hi, I'm Josh and...
+      </span>
+      <h1 class="my05">
+        I develop 
+        <span class="hero-text-outlined">
+          websites
+        </span>
+        and 
+        <span class="hero-text-outlined">
+          web apps
+        </span>
+      </h1>
+    </div>
+    
+    <div class="hero-subheading mb2">
+      Hiring a web developer for your next project?
+      Based out of Port Coquitlam, BC, I am ready to help you out.
+    </div>
+  
+    <div class="hero-cta">
+  
+      <a href="#portfolio" class="hero-cta-btn-primary" data-content="View My Work">
+        <span>
+          View My Work
+        </span>
+      </a>
+  
+      <a href="#portfolio" class="hero-cta-btn-secondary" data-content="Hire Me">
+        <span>
+          Hire Me
+        </span>
+      </a>
+  
+    </div> 
+
+    <div class="hero-heading-hover">
+      <div class="hero-heading-hover-tl"></div>
+      <div class="hero-heading-hover-tm"></div>
+      <div class="hero-heading-hover-tr"></div>
+      
+      <div class="hero-heading-hover-ml"></div>
+      <div class="hero-heading-hover-mm"></div>
+      <div class="hero-heading-hover-mr"></div>
+      
+      <div class="hero-heading-hover-bl"></div>
+      <div class="hero-heading-hover-bm"></div>
+      <div class="hero-heading-hover-br"></div>
+    </div>
+    
+  </div> <!-- hero-heading-wrapper -->
+
+
+
+
+
+  <div 
+    class="hero-bg-sky rellax" 
+    data-rellax-speed="-2">
+  </div>
+
+  <img 
+    src="./img/hero/stars.svg" 
+    class="hero-bg-stars rellax" 
+    data-rellax-speed="-5"
+    >
+
+  <div 
+    class="hero-bg-satellite rellax"
+    data-rellax-speed="-5"></div>
+  
+  <img 
+    src="./img/hero/skyline.svg" 
+    class="hero-bg-skyline rellax"
+    data-rellax-speed="1">
+
+  <img src="./img/hero/shooting-star.svg" class="hero-bg-shooting-star">
+  <img src="./img/hero/circles.svg" class="hero-bg-circles">
+  <img src="./img/hero/down-arrow.svg" class="hero-bg-down-arrow">
+
+</div> <!-- hero-wrapper -->
+
+
+
+
+<!-- <div class="socials-wrapper">
 <div class="socials">
 
   <div class="socials-heading">My Socials</div>
@@ -72,18 +162,10 @@
   </div>
 
 </div>
-</div>
+</div> -->
 
 
-<div class="hero-intro-wrapper">
-<div class="hero-intro">
-  <h1 class="mb3">
-    <span>Hi, I'm Josh.</span>
-    <span>I develop websites</span>
-    <span>and web apps</span>
-  </h1>
-</div>
-</div>
+
 
 
 
@@ -127,21 +209,25 @@
 </div>
 
 
-
-
-
-
-
-<section id="portfolio" class="portfolio container">
-  <h2>My Work</h2>
-</section>
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaa
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>bbb
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ccc
+<main>
   
+  <section id="portfolio" class="portfolio container">
+    <h2>My Work</h2>
+  </section>
+
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaa
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>bbb
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ccc
+    
+</main>
+
+
+
+<script src="./js/rellax.js"> </script>
+<script>
+  var rellax = new Rellax('.rellax');
+</script>
+
 </body>
 </html>

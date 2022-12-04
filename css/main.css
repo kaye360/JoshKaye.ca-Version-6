@@ -3,10 +3,10 @@
 @import './config.css';
 @import './global.css';
 @import './utils.css';
-@import './header-animations.css';
-@import './header.css';
 @import './nav.css';
-@import './portfolio.css';
+@import './hero.css';
+@import './hero-heading-hover.css';
+
 
 @font-face {
   font-family: 'Sharp Grotesk';
