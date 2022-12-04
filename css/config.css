@@ -2,21 +2,21 @@
 :root {
 
   /* HSL Colors -- For Transparency use hsla( var(--clr-pri-3), 0.5 ); */
-  --clr-pri-1 : 200, 45%, 95%;
-  --clr-pri-2 : 200, 45%, 90%;
-  --clr-pri-3 : 200, 45%, 80%;
-  --clr-pri-4 : 200, 45%, 65%;
-  --clr-pri-5 : 200, 45%, 50%;
-  --clr-pri-6 : 200, 45%, 25%;
-  --clr-pri-7 : 200, 45%, 10%;
+  --clr-primary-1 : 21, 14%, 95%;
+  --clr-primary-2 : 21, 14%, 90%;
+  --clr-primary-3 : 21, 14%, 85%;
+  --clr-primary-4 : 21, 14%, 75%;
+  --clr-primary-5 : 21, 14%, 50%;
+  --clr-primary-6 : 21, 14%, 30%;
+  --clr-primary-7 : 21, 14%, 20%;
 
-  --clr-sec-1 : 130, 84%, 98%;
-  --clr-sec-2 : 130, 84%, 90%;
-  --clr-sec-3 : 130, 84%, 80%;
-  --clr-sec-4 : 130, 84%, 65%;
-  --clr-sec-5 : 130, 84%, 50%;
-  --clr-sec-6 : 130, 84%, 25%;
-  --clr-sec-7 : 130, 84%, 10%;
+  --clr-secondary-1 : 202, 14%, 98%;
+  --clr-secondary-2 : 202, 14%, 90%;
+  --clr-secondary-3 : 202, 14%, 80%;
+  --clr-secondary-4 : 202, 14%, 50%;
+  --clr-secondary-5 : 202, 14%, 50%;
+  --clr-secondary-6 : 202, 14%, 25%;
+  --clr-secondary-7 : 202, 14%, 10%;
 
   --clr-ter-1 : 0, 84%, 98%;
   --clr-ter-2 : 0, 84%, 90%;

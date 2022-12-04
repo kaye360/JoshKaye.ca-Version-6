@@ -1,51 +1,43 @@
 
 
 
+/* nav wrapper */
 
-/* Nav Wrapper */
-
-/* Global */
 .main-nav {
   position: fixed;
-  inset : 0 0 auto 50%;
-  z-index : 200;
-
+  inset : 0 auto auto 50%;
+  z-index : 10;
   transform: translateX(-50%);
   width : 100%;
   max-width: var(--width-default);
-  padding : 3rem 1rem;
-
+  padding : 2rem 1rem;
   display : flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
+  background-color: hsl( var(--clr-primary-1), .95 );
+  /* mix-blend-mode:color-dodge; */
 }
 
 
 
 
-/* Logo */
+/* logo */
 
-/* Global */
 .logo-link {
-  display : inline-block;
-  font-family: 'Sharp Grotesk', Poppins, sans-serif;
+  color : hsl( var(--clr-primary-7) );
   font-size: var(--font-size-3);
-  color : hsl(201, 100%, 90%);
-  transition: all 250ms ease-in-out;
+  font-weight: 600;
 }
 
 .logo-link:hover {
-  transform: scale(1.2);
-  opacity: 0.1;
+  background-color: hsl( var(--clr-secondary-5) );
 }
 
 
 
-/* Mobile Menu button */
 
-/* Global/Mobile */
+/* mobile menu button */
 
-/* Desktop */
 @media screen and (min-width : 700px) {
   .mobile-menu-btn {
     display : none;
@@ -54,59 +46,48 @@
 
 
 
-/* Nav UL */
 
-/* Global */
-.main-nav ul {
-  display :none;
+
+/* socials ul */
+
+/* Mobile/Global */
+.socials {
+  display : none;
 }
-
-.main-nav li a {
-  position: relative;
-  display : block;
-  padding : 5px 10px;
-  color : hsl(201, 100%, 90%);
-  font-size: var(--font-size-1);
-  font-weight: 500;
-}
-
-.main-nav li a:hover {
-  background: none;
-}
-
-.main-nav li a::before,
-.main-nav li a::after {
-  content : '';
-  position: absolute;
-  z-index : -1;
-  top : 0;
-  bottom : 0;
-  width : 0%;
-  height : 100%;
-  transition: all 250ms var(--cubic-bez);
-}
-
-.main-nav li a::before {
-  left : 0;
-  background-color: hsl(201, 100%, 10%);
-}
-
-.main-nav li a::after {
-  right : 0;
-  border-bottom: 4px solid hsl(0, 84%, 66%);
-}
-
-.main-nav li a:hover::before {  width : 100%; }
-
-.main-nav li a:hover::after { width : 100%; }
-
-
 
 /* Desktop */
+.socials {
+  display : flex;
+  justify-content: end;
+  gap : 2rem;
+  padding-block : 0.5rem;
+}
+
+
+
+
+/* menu ul */
+
+.menu {
+  display : none;
+}
+
 @media screen and (min-width : 700px) {
-  .main-nav ul {
+  .menu {
     display : flex;
-    align-items: center;
-    gap : 0.5vw;
+    gap : 2rem;
+    font-size: var(--font-size-1);
   }
+}
+
+
+
+
+/* menu links */
+.nav-link {
+  color : hsl( var(--clr-primary-7) )
+}
+
+.nav-link:hover {
+  background-color : hsl( var(--clr-secondary-5) );
 }

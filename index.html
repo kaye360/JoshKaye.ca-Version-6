@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Josh Kaye - Port Coquitlam web developer</title>
   <link rel="stylesheet" href="./css/main.css">
-  <script src="./js/hero.js" defer></script>
-  <script src="./js/nav.js" defer></script>
+  <script src="./js/index.js" defer></script>
 </head>
-<body class="">
+<body>
 
 
 
@@ -30,204 +29,122 @@
   
   <button class="mobile-menu-btn">|||</button>
 
-  <ul class="menu">
-    <li><a href="#home"      class="nav-link">Home</a></li>
-    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-    <li><a href="#about"     class="nav-link">About</a></li>
-    <li><a href="#hire-me"   class="nav-link">Hire Me</a></li>
-    <li><a href="#contact"   class="nav-link">Contact</a></li>
-  </ul>
+
+  <div class="menus">
+
+    <ul class="socials">
+      <li><a href="#"><img src="./img/github.svg" alt=""></a></li>
+      <li><a href="#"><img src="./img/linkedin.svg" alt=""></a></li>
+      <li><a href="#"><img src="./img/instagram.svg" alt=""></a></li>
+    </ul>
+
+    <ul class="menu">
+      <li>{</li>
+      <li><a href="#home"      class="nav-link">Home</a></li>
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#about"     class="nav-link">About</a></li>
+      <li><a href="#hire-me"   class="nav-link">Hire Me</a></li>
+      <li><a href="#contact"   class="nav-link">Contact</a></li>
+      <li>}</li>
+    </ul>
+  </div>
+
 
 </nav>
 
 
+<div data-scroll-container>
 
 
-<div class="hero-wrapper" id="home">
 
+  <section class="hero-wrapper" id="home" data-scroll-section>
 
-  <div class="hero-heading-wrapper">
+    <div class="hero-wrapper-bg"></div>
 
-    <div class="hero-main-heading">
-      <span class="hero-main-heading-small">
-        Hi, I'm Josh and...
-      </span>
-      <h1 class="my05">
-        I develop 
-        <span class="hero-text-outlined">
-          websites
-        </span>
-        and 
-        <span class="hero-text-outlined">
-          web apps
-        </span>
-      </h1>
-    </div>
-    
-    <div class="hero-subheading mb2">
-      Hiring a web developer for your next project?
-      Based out of Port Coquitlam, BC, I am ready to help you out.
-    </div>
-  
-    <div class="hero-cta">
-  
-      <a href="#portfolio" class="hero-cta-btn-primary" data-content="View My Work">
-        <span>
-          View My Work
-        </span>
-      </a>
-  
-      <a href="#portfolio" class="hero-cta-btn-secondary" data-content="Hire Me">
-        <span>
-          Hire Me
-        </span>
-      </a>
-  
-    </div> 
+    <div class="hero-section">
 
-    <div class="hero-heading-hover">
-      <div class="hero-heading-hover-tl"></div>
-      <div class="hero-heading-hover-tm"></div>
-      <div class="hero-heading-hover-tr"></div>
+      <div class="hero-content">
+        
+        <div class="hero-main-heading">
+          <span class="hero-main-heading-small">
+            Hi, I'm Josh and...
+          </span>
+          <h1 class="my05">
+            I develop 
+            <span class="h1-highlight">
+              websites
+            </span>
+            and 
+            <span class="h1-highlight">
+              web apps
+            </span>
+          </h1>
+        </div>
+        
+        <div class="hero-subheading my2">
+          hiring a web developer for your next project?
+          based out of Port Coquitlam, BC, I am ready to help you out.
+        </div>
       
-      <div class="hero-heading-hover-ml"></div>
-      <div class="hero-heading-hover-mm"></div>
-      <div class="hero-heading-hover-mr"></div>
+        <div class="hero-cta">
       
-      <div class="hero-heading-hover-bl"></div>
-      <div class="hero-heading-hover-bm"></div>
-      <div class="hero-heading-hover-br"></div>
-    </div>
+          <a href="#portfolio" class="hero-cta-btn-primary" data-content="View My Work">
+            <span>
+              view my work
+            </span>
+          </a>
+      
+          <a href="#portfolio" class="hero-cta-btn-secondary" data-content="Hire Me">
+            <span>
+              hire me
+            </span>
+          </a>
+
+        </div> 
     
-  </div> <!-- hero-heading-wrapper -->
+      </div> <!-- hero-content-->
 
-
-
-
-
-  <div 
-    class="hero-bg-sky rellax" 
-    data-rellax-speed="-2">
-  </div>
-
-  <img 
-    src="./img/hero/stars.svg" 
-    class="hero-bg-stars rellax" 
-    data-rellax-speed="-5"
-    >
-
-  <div 
-    class="hero-bg-satellite rellax"
-    data-rellax-speed="-5"></div>
-  
-  <img 
-    src="./img/hero/skyline.svg" 
-    class="hero-bg-skyline rellax"
-    data-rellax-speed="1">
-
-  <img src="./img/hero/shooting-star.svg" class="hero-bg-shooting-star">
-  <img src="./img/hero/circles.svg" class="hero-bg-circles">
-  <img src="./img/hero/down-arrow.svg" class="hero-bg-down-arrow">
-
-</div> <!-- hero-wrapper -->
-
-
-
-
-<!-- <div class="socials-wrapper">
-<div class="socials">
-
-  <div class="socials-heading">My Socials</div>
-
-  <div class="socials-arrow">
-    <img src="./img/icons/socials-arrow.svg" alt="">
-  </div>
-
-  <div class="socials-icon">
-    <a href="https://github.com/kaye360/">
-      <img src="./img/socials/github.svg" alt="Github">
-    </a>
-  </div>
-  
-  <div class="socials-icon">
-    <a href="#">
-      <img src="./img/socials/linkedin.svg" alt="LinkedIn">
-    </a>
-  </div>
-  
-  <div class="socials-icon">
-    <a href="#">
-      <img src="./img/socials/instagram.svg" alt="Instagram">
-    </a>
-  </div>
-
-</div>
-</div> -->
-
-
-
-
-
-
-
-
-
-<div class="hero-cta-wrapper">
-<div class="hero-cta">
-
-  <div class="hero-cta-intro">
-    Hiring a web developer for <br>
-    your next project? I'm ready.
-  </div>
-
-  <div class="hero-cta-link hero-cta-primary">
-    <a href="#portfolio">View My Work</a>
-  </div>
-
-  <div class="hero-cta-link hero-cta-secondary">
-    <a href="#portfolio">Hire Me</a>
-  </div>
-
-</div>
-</div>
-
-
-
-<div class="hero-bg-circles"></div>
-
-<div class="hero-bg">
-  <div class="hero-bg-main">
-    <div class="hero-bg-video">
-      <video autoplay muted loop>
-        <source src="./img/hero/video.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="hero-bg-image">
-      <img src="./img/bg/hero-bg.jpg" alt="">
-    </div>
-  </div>
-</div>
-
-
-<main>
-  
-  <section id="portfolio" class="portfolio container">
-    <h2>My Work</h2>
-  </section>
-
-  
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaa
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>bbb
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ccc
+      <div class="hero-image">
+        <img src="./img/hero.svg">
+      </div>
+      
+    </div> <!-- hero-heading-wrapper -->
     
-</main>
+  </section> <!-- hero-wrapper -->
 
 
 
-<script src="./js/rellax.js"> </script>
-<script>
-  var rellax = new Rellax('.rellax');
-</script>
+
+
+
+
+
+
+
+
+  <div data-scroll-section>
+    <br><br><br><br><br><br>hello
+    <br><br><br><br><br><br>
+  </div>
+
+
+  <main data-scroll-section>
+    
+    <section id="portfolio" class="portfolio container">
+      <h2>My Work</h2>
+    </section>
+
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaa
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>bbb
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ccc
+      
+  </main>
+
+
+</div>
+
+
 
 </body>
 </html>
