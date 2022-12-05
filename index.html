@@ -40,109 +40,516 @@
 
     <ul class="menu">
       <li>{</li>
-      <li><a href="#home"      class="nav-link">Home</a></li>
-      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-      <li><a href="#about"     class="nav-link">About</a></li>
-      <li><a href="#hire-me"   class="nav-link">Hire Me</a></li>
-      <li><a href="#contact"   class="nav-link">Contact</a></li>
+      <li><a href="#home"      class="nav-link">home</a></li>
+      <li><a href="#portfolio" class="nav-link">portfolio</a></li>
+      <li><a href="#about"     class="nav-link">about</a></li>
+      <li><a href="#contact"   class="nav-link">contact</a></li>
       <li>}</li>
     </ul>
+
   </div>
-
-
+  
+  
 </nav>
 
-
-<div data-scroll-container>
-
+<div class="menu-highlight"></div>
 
 
-  <section class="hero-wrapper" id="home" data-scroll-section>
 
-    <div class="hero-wrapper-bg"></div>
 
-    <div class="hero-section">
+<section class="hero-wrapper" id="home">
 
-      <div class="hero-content">
-        
-        <div class="hero-main-heading">
-          <span class="hero-main-heading-small">
-            Hi, I'm Josh and...
+  <div class="hero-wrapper-bg"></div>
+
+  <div class="hero-section">
+
+    <div class="hero-content">
+      
+      <div class="hero-main-heading slide-right">
+        <span class="hero-main-heading-small">
+          hi, I'm Josh and...
+        </span>
+        <h1 class="my05">
+          i develop 
+          <span class="h1-highlight">
+            websites
           </span>
-          <h1 class="my05">
-            I develop 
-            <span class="h1-highlight">
-              websites
-            </span>
-            and 
-            <span class="h1-highlight">
-              web apps
-            </span>
-          </h1>
-        </div>
-        
-        <div class="hero-subheading my2">
-          hiring a web developer for your next project?
-          based out of Port Coquitlam, BC, I am ready to help you out.
-        </div>
-      
-        <div class="hero-cta">
-      
-          <a href="#portfolio" class="hero-cta-btn-primary" data-content="View My Work">
-            <span>
-              view my work
-            </span>
-          </a>
-      
-          <a href="#portfolio" class="hero-cta-btn-secondary" data-content="Hire Me">
-            <span>
-              hire me
-            </span>
-          </a>
-
-        </div> 
-    
-      </div> <!-- hero-content-->
-
-      <div class="hero-image">
-        <img src="./img/hero.svg">
+          and 
+          <span class="h1-highlight">
+            web apps
+          </span>
+        </h1>
       </div>
       
-    </div> <!-- hero-heading-wrapper -->
+      <div class="hero-subheading my2 slide-right">
+        hiring a web developer for your next project?
+        based out of Port Coquitlam, BC, I am ready to help you out.
+      </div>
     
-  </section> <!-- hero-wrapper -->
-
-
-
-
-
-
-
-
-
-
-
-  <div data-scroll-section>
-    <br><br><br><br><br><br>hello
-    <br><br><br><br><br><br>
-  </div>
-
-
-  <main data-scroll-section>
+      <div class="hero-cta slide-right">
     
-    <section id="portfolio" class="portfolio container">
-      <h2>My Work</h2>
-    </section>
-
+        <a href="#portfolio" class="hero-cta-btn-primary" data-content="View My Work ">
+          <span>
+            view my work
+          </span>
+        </a>
     
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaa
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>bbb
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ccc
-      
-  </main>
+        <a href="#contact" class="hero-cta-btn-secondary" data-content="Hire Me">
+          <span>
+            let's talk
+          </span>
+        </a>
+
+      </div> 
+  
+    </div> <!-- hero-content-->
+
+    <div class="hero-image slide-left">
+      <img src="./img/hero.svg">
+    </div>
+    
+  </div> <!-- hero-heading-wrapper -->
+  
+</section> <!-- hero-wrapper -->
 
 
-</div>
+
+
+<main>
+  
+
+
+
+  <section id="portfolio">
+  
+    
+    <h2 class="dark-section">
+      <div class="container">
+        some of my work
+      </div>
+    </h2>
+
+
+    <div class="portfolio-accordion container">
+
+      <!-- Item 1 Spendly -->
+      <div class="portfolio-item">
+
+        
+        <div class="portfolio-item-description">
+          
+          <h3>Spendly</h3>
+
+          <span class="portfolio-item-subheading">Money Tracking Web App</span>
+
+          <p>
+            Spendly is a custom Full-Stack web app that I've programmed from the ground up. It features a front-end UI made with React, and a backend with PHP and MYSQL.
+          </p>
+
+          <p>
+            User info, budgets, transactions, and forecast entries are stored in a MYSQL databased that can be accessed through my custom API.
+          </p>
+
+          <div class="portfolio-item-links">
+            <a href="#link">Project Demo</a>
+            <a href="#link">Repo</a>
+          </div>
+
+        </div>
+
+        <button class="portfolio-item-btn">
+          <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
+        </button>
+
+        <img src="./img/portfolio/spendly.png" alt="" class="portfolio-item-img">
+
+      </div>
+
+      <!-- Item 2 BookStack -->
+      <div class="portfolio-item">
+
+        
+        <div class="portfolio-item-description">
+          
+          <h3>BookStack</h3>
+
+          <span class="portfolio-item-subheading">Personal Library Web App</span>
+
+          <p>
+            BookStack is a custom Full-Stack web app that I programmed from the ground up.
+          </p>
+
+          <p>
+            It features a front-end UI made with React, and a backend with PHP and MYSQL. Book data is fetched from the Google Books API.
+          </p>
+
+          <div class="portfolio-item-links">
+            <a href="#link">Project Demo</a>
+            <a href="#link">Repo</a>
+          </div>
+
+        </div>
+
+        <button class="portfolio-item-btn">
+          <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
+        </button>
+
+        <img src="./img/portfolio/bookstack.png" alt="" class="portfolio-item-img">
+
+      </div>
+
+      <!-- Item 3 Vitality Fitness -->
+      <div class="portfolio-item">
+
+        
+        <div class="portfolio-item-description">
+          
+          <h3>Vitality Fitness</h3>
+
+          <span class="portfolio-item-subheading">Personal Trainer Wordpress Site</span>
+
+          <p>
+            For this project, I worked with the client, Nola, to identify her business goals for her website. 
+          </p>
+
+          <p>
+            I created a custom, responsive Wordpress theme for Vitality Fitness. The project required custom blocks and custom JavaScript Image Slider.
+          </p>
+
+          <div class="portfolio-item-links">
+            <a href="#link">Live Site</a>
+          </div>
+
+        </div>
+
+        <button class="portfolio-item-btn">
+          <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
+        </button>
+
+        <img src="./img/portfolio/vitality-fitness.png" alt="" class="portfolio-item-img">
+
+      </div>
+
+      <!-- Item 4 Bikes & Brews -->
+      <div class="portfolio-item">
+
+        
+        <div class="portfolio-item-description">
+          
+          <h3>Bikes & Brews</h3>
+
+          <span class="portfolio-item-subheading">Local Biking/Beer Group</span>
+
+          <p>
+            For this project, I worked with the client, Bill, to create website for a local cycling and brewery group. 
+          </p>
+
+          <p>
+            I created a custom, responsive WordPress theme for for Tri City Bikes and Brews.
+          </p>
+
+          <div class="portfolio-item-links">
+            <a href="#link">Live Site</a>
+          </div>
+
+        </div>
+
+        <button class="portfolio-item-btn">
+          <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
+        </button>
+
+        <img src="./img/portfolio/bikes-and-brews.png" alt="" class="portfolio-item-img">
+
+      </div>
+
+      <!-- Item 5 Task Manager -->
+      <div class="portfolio-item">
+
+        
+        <div class="portfolio-item-description">
+          
+          <h3>Task Manager</h3>
+
+          <span class="portfolio-item-subheading">Todo List React App</span>
+
+          <p>
+            Because every web developer has at least one.
+          </p>
+
+          <p>
+            This simple, light weight task manager stores, organizes, and keeps track of your personal todo list in the form of a React single page web app.
+          </p>
+
+          <div class="portfolio-item-links">
+            <a href="#link">Project demo</a>
+            <a href="#link">Repo</a>
+          </div>
+
+        </div>
+
+        <button class="portfolio-item-btn">
+          <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
+        </button>
+
+        <img src="./img/portfolio/task-manager.png" alt="" class="portfolio-item-img">
+
+      </div>
+
+    </div> <!-- portfolio-accordion -->
+
+
+
+    <div class="skills dark-section">
+
+      <h2 class="container">i work well with</h2>
+
+      <div class="skill-list" data-skill-list="
+        html
+        css
+        javascript
+        react
+        php
+        mysql
+        WordPress
+        node
+        git
+        figma
+        graphic design
+        ui/uix
+      ">
+        html
+        css
+        javascript
+        react
+        php
+        mysql
+        WordPress
+        node
+        git
+        figma
+        graphic design
+        ui/uix
+      </div>      
+
+    </div>
+  
+  
+  </section>
+
+
+
+
+  <section id="about" class="container">
+
+    <h2>about me</h2>
+
+
+    <div class="about-intro">
+
+      <p>
+        Hey! My name is Josh and I develop websites and web apps.
+      </p>
+
+      <div class="about-intro-img">
+        <img src="./img/josh.png" alt="Josh">
+      </div>
+
+    </div>
+
+
+    <div class="about-content">
+
+      <div class="about-content-1">
+
+        <h3>what i do</h3>
+
+        <p>
+          The internet is always in a state of change; keeping on top of these changes has been an exciting hobby for me since the early 2000's.
+        </p>
+
+        <p>
+          With a strong understanding of HTML, CSS, and JavaScript combined with experience and fascination with modern web development tools, I can be a valuable member of your team.
+        </p>
+
+      </div> <!-- about content 1 -->
+
+    </div>
+
+    <div class="about-content-2">
+
+      <h3>a little bit about me</h3>
+
+      <p>
+        I was born and raised in Langley, BC. In the early 2000's during highschool, I taught myself how to code websites from scratch. Between 2011 and 2022 I had a successful career as a Journeyman Electrician, wiring everything imaginable including small condos, apartment buildings, and industrial food production plants.
+      </p>
+
+      <p>
+        Recently, I've found myself rediscovering my fascination with website design and development. I currently reside in Port Coquitlam with my wife. In my spare time you will find me hiking, skateboarding, snowboarding or searching for the perfect IPA and the nearest brewery.
+      </p>
+
+    </div> <!-- about-content-2 -->
+
+    <div class="about-content-3">
+
+      <p>
+        Please feel free to have a look at my resume
+      </p>
+
+      <a href="./resume.pdf">resume</a>
+
+    </div>
+
+  </section>
+
+
+
+
+  <section id="education" class="education-wrapper">
+
+    <div class="container">
+
+      <h2 class="text-center">education/courses</h2>
+
+      <div class="course-list">
+
+        <!-- Course 1 -->
+        <div class="course">
+          <h3>Course Name</h3>
+          <span class="course-desc">
+            course desc
+          </span>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course">
+          <h3>Course Name</h3>
+          <span class="course-desc">
+            course desc
+          </span>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course">
+          <h3>Course Name</h3>
+          <span class="course-desc">
+            course desc
+          </span>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="course">
+          <h3>Course Name</h3>
+          <span class="course-desc">
+            course desc
+          </span>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="course">
+          <h3>Course Name</h3>
+          <span class="course-desc">
+            course desc
+          </span>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="course">
+          <h3>Course Name</h3>
+          <span class="course-desc">
+            course desc
+          </span>
+        </div>
+
+        <!-- Course 7 -->
+        <div class="course">
+          <h3>Course Name</h3>
+          <span class="course-desc">
+            course desc
+          </span>
+        </div>
+
+      </div><!-- course-list -->
+
+    </div> <!-- container -->
+
+  </section>
+
+
+
+
+  <section id="contact" class="container">
+
+
+
+
+    <form>
+      <div class="contact-form">
+
+        <span>name</span>
+        <input type="text" name="" id="">
+
+        <span>email</span>
+        <input type="email" name="" id="">
+
+        <span>phone</span>
+        <input type="tel name="" id="">
+
+        <span>name</span>
+        <textarea name="" id=""></textarea>
+
+        <input type="submit" value="Send Email">
+  
+      </div>
+    </form>
+
+
+
+
+    <div class="contact-info">
+
+      <p>
+        For web design and development services, job opportunities, or general information, feel free to use the contact form, email, or social media to get in touch with me.
+      </p>
+
+      <p>
+        I am always open to discussing new projects or opportunities to be a part of!
+      </p>
+
+      <div class="contact-icons">
+
+        <img src="" alt="">
+        <a href="#">jkaye@shaw.ca</a>
+
+        <img src="" alt="">
+        <a href="#">jkaye@shaw.ca</a>
+
+        <img src="" alt="">
+        <a href="#">jkaye@shaw.ca</a>
+
+        <img src="" alt="">
+        <a href="#">jkaye@shaw.ca</a>
+
+        <img src="" alt="">
+        <a href="#">jkaye@shaw.ca</a>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+
+
+</main>
+
+
+
+<footer>
+  &copy; copyright 2022 joshkaye.ca
+</footer>
+
 
 
 

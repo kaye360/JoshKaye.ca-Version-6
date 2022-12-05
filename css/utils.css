@@ -183,17 +183,10 @@
     opacity: 0.5;
 }
 
-.avatar {
-    border : 3px solid #fff;
-    border-radius: 50%;
-    width : 200px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
 
+/* Section color themes */
 
-/* List Items */
-
-ul.checkmark {
-    list-style-image:  url(../img/list-items/checkmark.svg);
+.dark-section {
+    background-color: hsl( var(--clr-tertiary-6) );
+    color : hsl( var(--clr-primary-1) );
 }

@@ -2,29 +2,30 @@
 :root {
 
   /* HSL Colors -- For Transparency use hsla( var(--clr-pri-3), 0.5 ); */
-  --clr-primary-1 : 21, 14%, 95%;
-  --clr-primary-2 : 21, 14%, 90%;
-  --clr-primary-3 : 21, 14%, 85%;
-  --clr-primary-4 : 21, 14%, 75%;
-  --clr-primary-5 : 21, 14%, 50%;
-  --clr-primary-6 : 21, 14%, 30%;
-  --clr-primary-7 : 21, 14%, 20%;
+  
+  --clr-primary-1 : 202, 14%, 95%;
+  --clr-primary-2 : 202, 14%, 90%;
+  --clr-primary-3 : 202, 14%, 80%;
+  --clr-primary-4 : 202, 14%, 50%;
+  --clr-primary-5 : 202, 14%, 50%;
+  --clr-primary-6 : 202, 14%, 25%;
+  --clr-primary-7 : 202, 14%, 10%;
 
-  --clr-secondary-1 : 202, 14%, 98%;
-  --clr-secondary-2 : 202, 14%, 90%;
-  --clr-secondary-3 : 202, 14%, 80%;
-  --clr-secondary-4 : 202, 14%, 50%;
-  --clr-secondary-5 : 202, 14%, 50%;
-  --clr-secondary-6 : 202, 14%, 25%;
-  --clr-secondary-7 : 202, 14%, 10%;
+  --clr-secondary-1 : 360, 40%, 95%;
+  --clr-secondary-2 : 360, 40%, 90%;
+  --clr-secondary-3 : 360, 40%, 85%;
+  --clr-secondary-4 : 360, 40%, 75%;
+  --clr-secondary-5 : 360, 40%, 50%;
+  --clr-secondary-6 : 360, 40%, 30%;
+  --clr-secondary-7 : 360, 40%, 20%;
 
-  --clr-ter-1 : 0, 84%, 98%;
-  --clr-ter-2 : 0, 84%, 90%;
-  --clr-ter-3 : 0, 84%, 80%;
-  --clr-ter-4 : 0, 84%, 65%;
-  --clr-ter-5 : 0, 84%, 50%;
-  --clr-ter-6 : 0, 84%, 25%;
-  --clr-ter-7 : 0, 84%, 10%;
+  --clr-tertiary-1 : 21, 13%, 98%;
+  --clr-tertiary-2 : 21, 13%, 90%;
+  --clr-tertiary-3 : 21, 13%, 80%;
+  --clr-tertiary-4 : 21, 13%, 65%;
+  --clr-tertiary-5 : 21, 13%, 50%;
+  --clr-tertiary-6 : 21, 13%, 20%;
+  --clr-tertiary-7 : 21, 13%, 10%;
 
   /* Font Sizes */    
   --font-size-0 : clamp(0.7rem, 1vw, 1rem);

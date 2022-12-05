@@ -10,12 +10,26 @@
   transform: translateX(-50%);
   width : 100%;
   max-width: var(--width-default);
-  padding : 2rem 1rem;
+  padding : 2rem 1rem 0 1rem;
   display : flex;
   justify-content: space-between;
-  align-items: end;
-  background-color: hsl( var(--clr-primary-1), .95 );
-  /* mix-blend-mode:color-dodge; */
+  align-items: center;
+  
+  background-color: hsl( var(--clr-primary-2), .95 );
+  border-bottom : 1px solid hsl( var(--clr-primary-3) );
+
+  animation: main-nav 500ms linear;
+}
+
+@keyframes main-nav {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media screen and (min-width : 700px) {
+  .main-nav {
+    align-items: end;
+  }
 }
 
 
@@ -24,13 +38,30 @@
 /* logo */
 
 .logo-link {
+  position: relative;
   color : hsl( var(--clr-primary-7) );
+  font-family: 'Sharp Grotesk', Poppins, sans-serif;
   font-size: var(--font-size-3);
   font-weight: 600;
+  transition: all 150ms ease-in-out;
 }
 
 .logo-link:hover {
-  background-color: hsl( var(--clr-secondary-5) );
+  color :hsl( var(--clr-secondary-6) );
+}
+
+.logo-link::before {
+  content: '';
+  position: absolute;
+  inset : 20% 60% -1rem -1rem;
+  z-index : -1;
+  background-color: hsl( var(--clr-primary-3) );
+  transition: all 150ms ease-in-out;
+}
+
+.logo-link:hover::before {
+  inset : -20% -1rem -20% 60%;
+  background-color: hsl( var(--clr-secondary-3) );
 }
 
 
@@ -47,13 +78,21 @@
 
 
 
+/* menus wrapper */
 
-/* socials ul */
-
-/* Mobile/Global */
-.socials {
+.menus {
   display : none;
 }
+
+@media screen and (min-width : 700px) {
+  .menus {
+    display: block;
+  }
+}
+
+
+
+/* socials ul */
 
 /* Desktop */
 .socials {
@@ -69,15 +108,9 @@
 /* menu ul */
 
 .menu {
-  display : none;
-}
-
-@media screen and (min-width : 700px) {
-  .menu {
-    display : flex;
-    gap : 2rem;
-    font-size: var(--font-size-1);
-  }
+  display : flex;
+  gap : 2rem;
+  font-size: var(--font-size-1);
 }
 
 
@@ -88,6 +121,20 @@
   color : hsl( var(--clr-primary-7) )
 }
 
-.nav-link:hover {
-  background-color : hsl( var(--clr-secondary-5) );
+
+
+
+/* menu highlight */
+
+.menu-highlight {
+  position: fixed;
+  top : -10vw;
+  left : -10vh;
+  z-index: 200;
+  width : 50px;
+  height : 50px;
+  border-radius: 5px;
+  backdrop-filter: invert(100) blur(1px);
+  transform: translateY(-50%);
+  pointer-events: none;
 }
