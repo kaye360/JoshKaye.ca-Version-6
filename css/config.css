@@ -38,6 +38,7 @@
   --font-size-7 : clamp(2.25rem, 7vw, 5rem);
 
   /* Global/Default Elements */
+  --font-default : Poppins, Helvetica, Arial, sans-serif;
   --body-bg-clr : 0, 0%, 100%;
 
   --link-clr : var(--clr-ter-4);

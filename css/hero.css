@@ -27,7 +27,7 @@
 
   animation : hero-wrapper-bg 200ms var(--cubic-bez);
 
-  /* display : none; */
+  display : none;
 }
 
 @keyframes hero-wrapper-bg {

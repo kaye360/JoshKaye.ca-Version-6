@@ -1,0 +1,32 @@
+
+
+.education-wrapper {
+  padding-block : 3rem;
+  background-color: hsl( var(--clr-primary-1) );
+  background-image: url(../img/circles.svg);
+  background-position: center bottom -50%;
+  background-repeat: none;
+  background-size: 100%;
+}
+
+.course-list h3 {
+  font-family: var(--font-default);
+  font-size: var(--font-size-1);
+  font-weight : 600;
+}
+
+.course-desc {
+  display : block;
+  margin-top : 1rem;
+  color : hsl( var(--clr-primary-4) );
+}
+
+@media screen and (min-width : 700px) {
+    .course-list {
+      display : grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 3rem;
+      row-gap: 3rem;
+    }
+}
