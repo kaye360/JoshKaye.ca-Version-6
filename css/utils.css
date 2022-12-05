@@ -9,29 +9,29 @@
 .fs6 { font-size : var(--font-size-6); }
 .fs7 { font-size : var(--font-size-7); }
 
-.clr-pri-1 { color : hsl( var(--clr-pri-1) ); }
-.clr-pri-2 { color : hsl( var(--clr-pri-2) ); }
-.clr-pri-3 { color : hsl( var(--clr-pri-3) ); }
-.clr-pri-4 { color : hsl( var(--clr-pri-4) ); }
-.clr-pri-5 { color : hsl( var(--clr-pri-5) ); }
-.clr-pri-6 { color : hsl( var(--clr-pri-6) ); }
-.clr-pri-7 { color : hsl( var(--clr-pri-7) ); }
+.clr-primary-1 { color : hsl( var(--clr-primary-1) ); }
+.clr-primary-2 { color : hsl( var(--clr-primary-2) ); }
+.clr-primary-3 { color : hsl( var(--clr-primary-3) ); }
+.clr-primary-4 { color : hsl( var(--clr-primary-4) ); }
+.clr-primary-5 { color : hsl( var(--clr-primary-5) ); }
+.clr-primary-6 { color : hsl( var(--clr-primary-6) ); }
+.clr-primary-7 { color : hsl( var(--clr-primary-7) ); }
 
-.clr-sec-1 { color : hsl( var(--clr-sec-1) ); }
-.clr-sec-2 { color : hsl( var(--clr-sec-2) ); }
-.clr-sec-3 { color : hsl( var(--clr-sec-3) ); }
-.clr-sec-4 { color : hsl( var(--clr-sec-4) ); }
-.clr-sec-5 { color : hsl( var(--clr-sec-5) ); }
-.clr-sec-6 { color : hsl( var(--clr-sec-6) ); }
-.clr-sec-7 { color : hsl( var(--clr-sec-7) ); }
+.clr-secondary-1 { color : hsl( var(--clr-secondary-1) ); }
+.clr-secondary-2 { color : hsl( var(--clr-secondary-2) ); }
+.clr-secondary-3 { color : hsl( var(--clr-secondary-3) ); }
+.clr-secondary-4 { color : hsl( var(--clr-secondary-4) ); }
+.clr-secondary-5 { color : hsl( var(--clr-secondary-5) ); }
+.clr-secondary-6 { color : hsl( var(--clr-secondary-6) ); }
+.clr-secondary-7 { color : hsl( var(--clr-secondary-7) ); }
 
-.clr-ter-1 { color : hsl( var(--clr-ter-1) ); }
-.clr-ter-2 { color : hsl( var(--clr-ter-2) ); }
-.clr-ter-3 { color : hsl( var(--clr-ter-3) ); }
-.clr-ter-4 { color : hsl( var(--clr-ter-4) ); }
-.clr-ter-5 { color : hsl( var(--clr-ter-5) ); }
-.clr-ter-6 { color : hsl( var(--clr-ter-6) ); }
-.clr-ter-7 { color : hsl( var(--clr-ter-7) ); }
+.clr-tertiary-1 { color : hsl( var(--clr-tertiary-1) ); }
+.clr-tertiary-2 { color : hsl( var(--clr-tertiary-2) ); }
+.clr-tertiary-3 { color : hsl( var(--clr-tertiary-3) ); }
+.clr-tertiary-4 { color : hsl( var(--clr-tertiary-4) ); }
+.clr-tertiary-5 { color : hsl( var(--clr-tertiary-5) ); }
+.clr-tertiary-6 { color : hsl( var(--clr-tertiary-6) ); }
+.clr-tertiary-7 { color : hsl( var(--clr-tertiary-7) ); }
 
 /* Margin Classes */
 .ml1 { margin-left : 1rem; }

@@ -39,10 +39,6 @@
 
   /* Global/Default Elements */
   --font-default : Poppins, Helvetica, Arial, sans-serif;
-  --body-bg-clr : 0, 0%, 100%;
-
-  --link-clr : var(--clr-ter-4);
-  --link-hover-clr : var(--clr-pri-3);
 
   /* Margin/Padding defaults */
   --padding-x-default : 2vw;

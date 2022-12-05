@@ -46,10 +46,12 @@ p {
 
 a {
   text-decoration: none;
+  color :hsl( var(--clr-secondary-5) )
 }
 
 a:hover, a:focus {
-  color : hsl( var(--link-hover-clr) );
+  background-color: #333;
+  color :hsl( var(--clr-tertiary-3) )
 }
 
 button {

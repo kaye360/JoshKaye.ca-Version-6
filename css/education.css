@@ -9,6 +9,10 @@
   background-size: 100%;
 }
 
+.course {
+  margin-bottom : 3rem;
+}
+
 .course-list h3 {
   font-family: var(--font-default);
   font-size: var(--font-size-1);

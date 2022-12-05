@@ -47,6 +47,7 @@
 }
 
 .logo-link:hover {
+  background: none;
   color :hsl( var(--clr-secondary-6) );
 }
 
@@ -118,9 +119,13 @@
 
 /* menu links */
 .nav-link {
-  color : hsl( var(--clr-primary-7) )
+  color : hsl( var(--clr-primary-7) );
 }
 
+.nav-link:hover {
+  color : hsl( var(--clr-primary-7) );
+  background-color: transparent;
+}
 
 
 

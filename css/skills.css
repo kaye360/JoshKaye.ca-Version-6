@@ -6,13 +6,17 @@
 .skill-list-wrapper {
   overflow: hidden;
 }
-
 .skill-list {
-  white-space: nowrap;
   word-spacing: 1rem;
   font-size: var(--font-size-1);
 }
 
-.skill-list::after {
-  content: attr(data-skill-list);
+@media screen and (min-width : 700px) {
+  .skill-list {
+    word-spacing: 1rem;
+  }
+  
+  .skill-list::after {
+    content: attr(data-skill-list);
+  }
 }

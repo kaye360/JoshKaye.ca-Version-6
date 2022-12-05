@@ -13,6 +13,7 @@
   justify-content: space-between;
   gap : 2rem;
 
+  position: relative;
   width : 100%;
   max-height : var(--max-height);
   padding-bottom : 5rem;
@@ -100,17 +101,31 @@
   transform: rotate(540deg);
 }
 
+
 .portfolio-item-img {
-  min-width : 50%;
-  width : 50%;
+  position: absolute;
+  inset : 0 0 0 50%;
+  z-index: -1;
   object-fit: cover;
   object-position: center top;
-  opacity: 0.4;
+  opacity: 0.1;
 }
 
-.portfolio-item:hover .portfolio-item-img {
-  opacity: 1;
+@media screen and (min-width : 700px) {
+  .portfolio-item-img {
+    position: relative;
+    inset : initial;
+    z-index: 1;
+    min-width : 50%;
+    width : 50%;
+    opacity: 0.3;
+  }
+
+  .portfolio-item:hover .portfolio-item-img {
+    opacity: 1;
+  }
 }
+
 
 
 /* portfolio-item-animations */
