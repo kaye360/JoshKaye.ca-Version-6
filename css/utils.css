@@ -197,8 +197,14 @@
 .btn {
   display : inline-block;
   padding : 0.5rem 1rem;
+
   background-color: hsl( var(--clr-secondary-4) );
+  font-weight: 600;
+  font-size: var(--font-size-1);
+  letter-spacing: 0.1rem;
   color : hsl( var(--clr-primary-1) );
+  border :0;
+  cursor: pointer;
 }
 
 .btn:hover, .btn:focus {

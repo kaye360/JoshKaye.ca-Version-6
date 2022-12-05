@@ -16,7 +16,7 @@
 
 
 
-<a href="#content" id="skip">Skip to content</a>
+<a href="#content" id="skip" data-scroll-to>Skip to content</a>
 
 
 
@@ -35,17 +35,47 @@
   <div class="menus">
 
     <ul class="socials">
-      <li><a href="#"><img src="./img/github.svg" alt=""></a></li>
-      <li><a href="#"><img src="./img/linkedin.svg" alt=""></a></li>
-      <li><a href="#"><img src="./img/instagram.svg" alt=""></a></li>
+      <li><a href="#"><img src="./img/icons/github.svg" alt=""></a></li>
+      <li><a href="#"><img src="./img/icons/linkedin.svg" alt=""></a></li>
+      <li><a href="#"><img src="./img/icons/instagram.svg" alt=""></a></li>
     </ul>
 
     <ul class="menu">
       <li>{</li>
-      <li><a href="#home"      class="nav-link" data-scroll-to>home</a></li>
-      <li><a href="#portfolio" class="nav-link" data-scroll-to>portfolio</a></li>
-      <li><a href="#about"     class="nav-link" data-scroll-to>about</a></li>
-      <li><a href="#contact"   class="nav-link" data-scroll-to>contact</a></li>
+      <li>
+        <a 
+          href="#home" 
+          class="nav-link" 
+          data-scroll-to>
+            home
+        </a>
+      </li>
+      <li>
+        <a  
+          href="#portfolio" 
+          class="nav-link" 
+          data-scroll-to 
+          data-scroll-offset="-150px">
+            portfolio
+        </a>
+      </li>
+      <li>
+        <a  
+          href="#about"
+          class="nav-link" 
+          data-scroll-to
+          data-scroll-offset="-150px">
+            about
+        </a>
+      </li>
+      <li>
+        <a 
+          href="#contact"
+          class="nav-link" 
+          data-scroll-to
+          data-scroll-offset="-150px">
+            contact
+        </a></li>
       <li>}</li>
     </ul>
 
@@ -100,6 +130,7 @@
           class="hero-cta-btn-primary" 
           data-content="View My Work" 
           data-scroll-to
+          data-scroll-offset=""
         >
           <span>
             view my work
@@ -111,6 +142,7 @@
           class="hero-cta-btn-secondary" 
           data-content="Hire Me"
           data-scroll-to
+          data-scroll-offset="-150px"
         >
           <span>
             let's talk
@@ -132,7 +164,7 @@
 
 
 
-<main>
+<main id="content">
   
 
 
@@ -488,65 +520,75 @@
 
 
 
-  <section id="contact" class="container" data-scroll-section>
+  <section id="contact" class="contact-wrapper container" data-scroll-section>
+
+    <h2>lets talk</h2>
 
 
+    <div class="contact">
+      <form>
+        <div class="contact-form">
 
+          <label>
+            <span>name*</span>
+            <input type="text" name="" id="" required>
+          </label>
 
-    <form>
-      <div class="contact-form">
+          <label>
+            <span>email*</span>
+            <input type="email" name="" id="" required>
+          </label>
 
-        <span>name</span>
-        <input type="text" name="" id="">
+          <label>
+            <span>phone</span>
+            <input type="tel" name="" id="">
+          </label>
 
-        <span>email</span>
-        <input type="email" name="" id="">
+          <label>
+            <span>message*</span>
+            <textarea name="" id="" required></textarea>
+          </label>
 
-        <span>phone</span>
-        <input type="tel name="" id="">
+          <input type="submit" value="Send Email" class="btn">
 
-        <span>name</span>
-        <textarea name="" id=""></textarea>
+          <p class="my2">
+            * required fields
+          </p>
+    
+        </div>
+      </form>
 
-        <input type="submit" value="Send Email">
-  
+      <div class="contact-info">
+
+        <p>
+          For web design and development services, job opportunities, or general information, feel free to use the contact form, email, or social media to get in touch with me.
+        </p>
+
+        <p>
+          I am always open to discussing new projects or opportunities to be a part of!
+        </p>
+
+        <div class="contact-icons">
+
+          <img src="./img/contact/email.svg" alt="">
+          <a href="mailto:jkaye@shaw.ca">jkaye@shaw.ca</a>
+
+          <img src="./img/contact/location.svg" alt="">
+          port coquitlam, bc
+
+          <img src="./img/contact/github.svg" alt="">
+          <a href="https://github.com/kaye360">@kaye360</a>
+
+          <img src="./img/contact/linkedin.svg" alt="">
+          <a href="https://www.linkedin.com/in/josh-kaye-ca/" target="_blank">@josh-kaye-ca</a>
+
+          <img src="./img/contact/instagram.svg" alt="">
+          <a href="https://www.instagram.com/kaye.360/" target="_blank">@kaye.360</a>
+
+        </div>
+
       </div>
-    </form>
-
-
-
-
-    <div class="contact-info">
-
-      <p>
-        For web design and development services, job opportunities, or general information, feel free to use the contact form, email, or social media to get in touch with me.
-      </p>
-
-      <p>
-        I am always open to discussing new projects or opportunities to be a part of!
-      </p>
-
-      <div class="contact-icons">
-
-        <img src="" alt="">
-        <a href="#">jkaye@shaw.ca</a>
-
-        <img src="" alt="">
-        <a href="#">jkaye@shaw.ca</a>
-
-        <img src="" alt="">
-        <a href="#">jkaye@shaw.ca</a>
-
-        <img src="" alt="">
-        <a href="#">jkaye@shaw.ca</a>
-
-        <img src="" alt="">
-        <a href="#">jkaye@shaw.ca</a>
-
-      </div>
-
     </div>
-
 
   </section>
 

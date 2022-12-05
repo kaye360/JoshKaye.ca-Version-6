@@ -16,11 +16,11 @@ body {
   background-color: hsl( var(--clr-primary-2) );
 }
 
-#portfolio,
+/* #portfolio,
 #about,
 #contact {
   padding-top : 120px;
-}
+} */
 
 img, svg { 
   max-width: 100%;

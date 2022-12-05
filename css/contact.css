@@ -1,0 +1,58 @@
+
+
+.contact-wrapper {
+  background-image: url(../img/contact/contact-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.contact {
+  margin-top : 3rem;
+}
+
+@media screen and (min-width : 700px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap : 8rem;
+  }
+}
+
+.contact label {
+  display : block;
+  margin-bottom: 2rem;
+}
+
+.contact label span {
+  display : block;
+}
+
+.contact input[type=text],
+.contact input[type=email],
+.contact input[type=tel],
+.contact textarea {
+  width : 100%;
+  padding :0.5rem;
+  
+  background-color: hsl( var(--clr-primary-3) );
+  border : 0;
+  border-radius: 5px;
+}
+
+.contact input[type=text],
+.contact input[type=email],
+.contact input[type=tel] {
+  height : 2rem;
+}
+
+.contact textarea {
+  height : 10rem;
+  resize: none;
+}
+
+.contact-info {
+  padding : 2rem;
+  background-color: hsl( var(--clr-primary-1) );
+  opacity: 0.7;
+}
