@@ -2,19 +2,20 @@
 
 // Hero inverted bg disappearing act
 
-const heroBg = document.querySelector('.hero-wrapper-bg')
+// const heroBg = document.querySelector('.hero-wrapper-bg')
 
-window.addEventListener('scroll', () => {
-  amount = 1 - (scrollY / screen.height) * 3
+// window.addEventListener('scroll', () => {
+//   console.log('hi')
+//   amount = 1 - (scrollY / screen.height) * 3
   
-  if (amount >= 0.1) {
-    heroBg.style.transform = `translate(-0%, -50%) scale(${amount})`
-  } 
+//   if (amount >= 0.1) {
+//     heroBg.style.transform = `translate(-0%, -50%) scale(${amount})`
+//   } 
   
-  if (amount < 0.2) {
-    heroBg.style.transform = `translate(-0%, -50%) scale(0)`
-  }
-})
+//   if (amount < 0.2) {
+//     heroBg.style.transform = `translate(-0%, -50%) scale(0)`
+//   }
+// })
 
 
 
@@ -43,6 +44,7 @@ mainNav.addEventListener('mouseout', () => {
 // Portfolio Accordion
 
 const portfolioItems = document.querySelectorAll('.portfolio-item')
+
 const maxHeight = getComputedStyle(
   document.querySelector('.portfolio-accordion') 
 ).getPropertyValue('--max-height')
@@ -64,3 +66,32 @@ function showPortfolioItem(currentItem) {
 
   currentItem.classList.add('portfolio-item-active')
 }
+
+
+
+
+// Portfolio item animations
+
+const portfolioAccordion = document.querySelector('.portfolio-accordion')
+
+
+const portolioObserverOptions = {
+  root : null,
+  threshold : 0,
+  rootMargin : "5% 0px 0px 0px"
+}
+
+const portfolioObserver = new IntersectionObserver( function(entries, observer) {
+  entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        portfolioAccordion.classList.add('portfolio-accordion-animate')
+      } else {
+        portfolioAccordion.classList.remove('portfolio-accordion-animate')
+      }
+      
+  })
+}, portolioObserverOptions)
+
+portfolioObserver.observe(portfolioAccordion)
+
+

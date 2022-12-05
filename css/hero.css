@@ -15,11 +15,11 @@
 .hero-wrapper-bg {
   content: '';
   position: fixed;
-  inset : 50% auto auto 50%;
+  inset : 20% -10% auto auto;
   z-index: 200;
-  transform: translate(0%, -50%);
+  /* transform: translate(-50%, -50%); */
   rotate : -3deg;
-  width : 65%;
+  width : 50%;
   max-width : calc( var(--width-default) * 0.65 );
   height : 50%;
 
@@ -27,15 +27,15 @@
 
   animation : hero-wrapper-bg 200ms var(--cubic-bez);
 
-  display : none;
+  /* display : none; */
 }
 
 @keyframes hero-wrapper-bg {
   from {
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(0, -50%) scale(0);
   }
   to {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(0, -50%) scale(1);
   }
 }
 

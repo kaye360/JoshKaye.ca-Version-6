@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Josh Kaye - Port Coquitlam web developer</title>
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/locomotive-scroll.css">
   <script src="./js/index.js" defer></script>
 </head>
 <body>
+<div data-scroll-container>
 
 
 
@@ -22,7 +24,7 @@
 <nav class="main-nav">
 
   <div class="logo">
-    <a href="#home" class="logo-link">
+    <a href="#home" class="logo-link" data-scroll-to>
       JOSHKAYE.CA
     </a>
   </div>
@@ -40,10 +42,10 @@
 
     <ul class="menu">
       <li>{</li>
-      <li><a href="#home"      class="nav-link">home</a></li>
-      <li><a href="#portfolio" class="nav-link">portfolio</a></li>
-      <li><a href="#about"     class="nav-link">about</a></li>
-      <li><a href="#contact"   class="nav-link">contact</a></li>
+      <li><a href="#home"      class="nav-link" data-scroll-to>home</a></li>
+      <li><a href="#portfolio" class="nav-link" data-scroll-to>portfolio</a></li>
+      <li><a href="#about"     class="nav-link" data-scroll-to>about</a></li>
+      <li><a href="#contact"   class="nav-link" data-scroll-to>contact</a></li>
       <li>}</li>
     </ul>
 
@@ -57,9 +59,14 @@
 
 
 
-<section class="hero-wrapper" id="home">
+<section class="hero-wrapper" id="home" data-scroll-section>
 
-  <div class="hero-wrapper-bg"></div>
+  <div 
+    class="hero-wrapper-bg"
+    data-scroll
+    data-scroll-direction="horizontal"  
+    data-scroll-speed="-6"
+  ></div>
 
   <div class="hero-section">
 
@@ -88,13 +95,23 @@
     
       <div class="hero-cta slide-right">
     
-        <a href="#portfolio" class="hero-cta-btn-primary" data-content="View My Work ">
+        <a 
+          href="#portfolio" 
+          class="hero-cta-btn-primary" 
+          data-content="View My Work" 
+          data-scroll-to
+        >
           <span>
             view my work
           </span>
         </a>
     
-        <a href="#contact" class="hero-cta-btn-secondary" data-content="Hire Me">
+        <a 
+          href="#contact" 
+          class="hero-cta-btn-secondary" 
+          data-content="Hire Me"
+          data-scroll-to
+        >
           <span>
             let's talk
           </span>
@@ -120,7 +137,7 @@
 
 
 
-  <section id="portfolio">
+  <section id="portfolio" data-scroll-section>
   
     
     <h2 class="dark-section">
@@ -150,9 +167,13 @@
             User info, budgets, transactions, and forecast entries are stored in a MYSQL databased that can be accessed through my custom API.
           </p>
 
+          <p>
+            <strong>Hint:</strong> Log in as "guest123" with password "123456"
+          </p>
+
           <div class="portfolio-item-links">
-            <a href="#link">Project Demo</a>
-            <a href="#link">Repo</a>
+            <a href="https://joshkaye.ca/projects/spendly/"    class="btn" target="_blank">Project Demo</a>
+            <a href="https://github.com/kaye360/money-tracker" class="btn" target="_blank">Repo</a>
           </div>
 
         </div>
@@ -161,7 +182,7 @@
           <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
         </button>
 
-        <img src="./img/portfolio/spendly.png" alt="" class="portfolio-item-img">
+        <img src="./img/portfolio/spendly.png" alt="App Screenshot" class="portfolio-item-img">
 
       </div>
 
@@ -184,8 +205,8 @@
           </p>
 
           <div class="portfolio-item-links">
-            <a href="#link">Project Demo</a>
-            <a href="#link">Repo</a>
+            <a href="https://joshkaye.ca/projects/bookstack-app/build/" class="btn" target="_blank">Project Demo</a>
+            <a href="https://github.com/kaye360/BookStack-App"          class="btn" target="_blank">Repo</a>
           </div>
 
         </div>
@@ -194,7 +215,7 @@
           <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
         </button>
 
-        <img src="./img/portfolio/bookstack.png" alt="" class="portfolio-item-img">
+        <img src="./img/portfolio/bookstack.png" alt="App Screenshot" class="portfolio-item-img">
 
       </div>
 
@@ -217,7 +238,7 @@
           </p>
 
           <div class="portfolio-item-links">
-            <a href="#link">Live Site</a>
+            <a href="https://vitality-fitness.ca/" class="btn" target="_blank">Live Site</a>
           </div>
 
         </div>
@@ -226,7 +247,7 @@
           <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
         </button>
 
-        <img src="./img/portfolio/vitality-fitness.png" alt="" class="portfolio-item-img">
+        <img src="./img/portfolio/vitality-fitness.png" alt="Site Screenshot" class="portfolio-item-img">
 
       </div>
 
@@ -249,7 +270,7 @@
           </p>
 
           <div class="portfolio-item-links">
-            <a href="#link">Live Site</a>
+            <a href="https://bikesandbrews.ca/" class="btn" target="_blank">Live Site</a>
           </div>
 
         </div>
@@ -258,7 +279,7 @@
           <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
         </button>
 
-        <img src="./img/portfolio/bikes-and-brews.png" alt="" class="portfolio-item-img">
+        <img src="./img/portfolio/bikes-and-brews.png" alt="Site Screenshot" class="portfolio-item-img">
 
       </div>
 
@@ -281,8 +302,8 @@
           </p>
 
           <div class="portfolio-item-links">
-            <a href="#link">Project demo</a>
-            <a href="#link">Repo</a>
+            <a href="https://jkaye-taskmanager.netlify.app/"                class="btn" target="_blank">Project demo</a>
+            <a href="https://github.com/kaye360/Task-Manager/tree/main/src" class="btn" target="_blank">Repo</a>
           </div>
 
         </div>
@@ -291,7 +312,7 @@
           <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
         </button>
 
-        <img src="./img/portfolio/task-manager.png" alt="" class="portfolio-item-img">
+        <img src="./img/portfolio/task-manager.png" alt="App Screenshot" class="portfolio-item-img">
 
       </div>
 
@@ -303,33 +324,16 @@
 
       <h2 class="container">i work well with</h2>
 
-      <div class="skill-list" data-skill-list="
-        html
-        css
-        javascript
-        react
-        php
-        mysql
-        WordPress
-        node
-        git
-        figma
-        graphic design
-        ui/uix
-      ">
-        html
-        css
-        javascript
-        react
-        php
-        mysql
-        WordPress
-        node
-        git
-        figma
-        graphic design
-        ui/uix
-      </div>      
+      <div class="skill-list-wrapper container">
+
+        <div class="skill-list" 
+          data-scroll data-scroll-direction="horizontal" data-scroll-speed="2"
+          data-skill-list="
+            html css javascript react php mysql wordPress node git figma graphic design ui/ux">
+            html css javascript react php mysql wordPress node git figma graphic design ui/ux
+        </div>      
+
+      </div>
 
     </div>
   
@@ -339,7 +343,7 @@
 
 
 
-  <section id="about" class="container">
+  <section id="about" class="container" data-scroll-section>
 
     <h2>about me</h2>
 
@@ -404,7 +408,7 @@
 
 
 
-  <section id="education" class="education-wrapper">
+  <section id="education" class="education-wrapper" data-scroll-section>
 
     <div class="container">
 
@@ -477,7 +481,7 @@
 
 
 
-  <section id="contact" class="container">
+  <section id="contact" class="container" data-scroll-section>
 
 
 
@@ -552,6 +556,17 @@
 
 
 
+<script src="./js/locomotive-scroll.min.js"></script>
+<script>
+    (function () {
+      const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+});
+    })();
+</script>
 
+
+</div>
 </body>
 </html>

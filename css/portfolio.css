@@ -2,9 +2,9 @@
 
 .portfolio-accordion {
   --max-height : var(--font-size-7);
-
   counter-reset: portfolio;
-  padding-block: 3rem;
+
+  padding-block: 5rem;
 }
 
 .portfolio-item {
@@ -60,6 +60,19 @@
   color : transparent;
 }
 
+.portfolio-item-subheading {
+  display : block;
+  margin-bottom : 1rem;
+  font-size: var(--font-size-1);
+  color :hsl( var(--clr-primary-4) );
+}
+
+.portfolio-item-links {
+  display : flex;
+  align-items: center;
+  gap : 1rem;
+}
+
 .portfolio-item-btn {
   display : flex;
   gap : 0.5rem;
@@ -97,4 +110,30 @@
 
 .portfolio-item:hover .portfolio-item-img {
   opacity: 1;
+}
+
+
+/* portfolio-item-animations */
+
+.portfolio-accordion-animate .portfolio-item {
+  --acc-delay : 100ms;
+  animation: portfolio-item 400ms ease-in-out both;
+}
+
+.portfolio-accordion-animate .portfolio-item:nth-child(1) { animation-delay: calc( var(--acc-delay) * 1 ) ;}
+.portfolio-accordion-animate .portfolio-item:nth-child(2) { animation-delay: calc( var(--acc-delay) * 2 ) ;}
+.portfolio-accordion-animate .portfolio-item:nth-child(3) { animation-delay: calc( var(--acc-delay) * 3 ) ;}
+.portfolio-accordion-animate .portfolio-item:nth-child(4) { animation-delay: calc( var(--acc-delay) * 4 ) ;}
+.portfolio-accordion-animate .portfolio-item:nth-child(5) { animation-delay: calc( var(--acc-delay) * 5 ) ;}
+
+
+@keyframes portfolio-item { 
+  from {
+    filter: blur(10px);
+    transform: translate(0, 50%);
+  }
+  to {
+    filter: none;
+    transform: translateX(0);
+  }
 }

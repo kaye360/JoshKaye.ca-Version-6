@@ -190,3 +190,18 @@
     background-color: hsl( var(--clr-tertiary-6) );
     color : hsl( var(--clr-primary-1) );
 }
+
+
+/* buttons */
+
+.btn {
+  display : inline-block;
+  padding : 0.5rem 1rem;
+  background-color: hsl( var(--clr-secondary-4) );
+  color : hsl( var(--clr-primary-1) );
+}
+
+.btn:hover, .btn:focus {
+    background-color: hsl( var(--clr-primary-4) );
+    color : hsl( var(--clr-primary-1) );
+}
