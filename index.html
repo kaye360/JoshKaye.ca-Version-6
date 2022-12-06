@@ -29,19 +29,43 @@
     </a>
   </div>
   
-  <button class="mobile-menu-btn">|||</button>
+  <button class="mobile-menu-btn">
+
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line 
+        class="menu-btn-line-top" 
+        x1="1" y1="10" x2="29" y2="10" 
+        stroke="#333333" stroke-width="2" stroke-linecap="round"/>
+      <line 
+        class="menu-btn-line-bottom" 
+        x1="1" y1="20" x2="29" y2="20" 
+        stroke="#333333" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+
+  </button>
 
 
   <div class="menus">
 
     <ul class="socials">
-      <li><a href="#"><img src="./img/icons/github.svg" alt=""></a></li>
-      <li><a href="#"><img src="./img/icons/linkedin.svg" alt=""></a></li>
-      <li><a href="#"><img src="./img/icons/instagram.svg" alt=""></a></li>
+      <li>
+        <a href="https://github.com/kaye360" target="_blank">
+          <img src="./img/icons/github.svg" alt="GitHub">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/josh-kaye-ca/" target="_blank">
+          <img src="./img/icons/linkedin.svg" alt="Linkedin">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/kaye.360/" target="_blank">
+          <img src="./img/icons/instagram.svg" alt="Instagram">
+        </a>
+      </li>
     </ul>
 
     <ul class="menu">
-      <li>{</li>
       <li>
         <a 
           href="#home" 
@@ -76,7 +100,6 @@
           data-scroll-offset="-150px">
             contact
         </a></li>
-      <li>}</li>
     </ul>
 
   </div>
@@ -523,37 +546,38 @@
   <section id="contact" class="contact-wrapper container" data-scroll-section>
 
     <h2>lets talk</h2>
-
+    
+    <p class="my2">
+      * required fields
+    </p>
 
     <div class="contact">
-      <form>
+      <form id="email-form" action="email-handler.php" method="post">
         <div class="contact-form">
 
           <label>
             <span>name*</span>
-            <input type="text" name="" id="" required>
+            <input type="text" name="name" id="name" required>
           </label>
 
           <label>
             <span>email*</span>
-            <input type="email" name="" id="" required>
+            <input type="email" name="email" id="email" required>
           </label>
 
           <label>
             <span>phone</span>
-            <input type="tel" name="" id="">
+            <input type="tel" name="phone" id="phone">
           </label>
 
           <label>
             <span>message*</span>
-            <textarea name="" id="" required></textarea>
+            <textarea name="message" id="message" required></textarea>
           </label>
 
           <input type="submit" value="Send Email" class="btn">
 
-          <p class="my2">
-            * required fields
-          </p>
+          <div id="email-response" class="mt1"></div>
     
         </div>
       </form>

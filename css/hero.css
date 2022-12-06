@@ -19,10 +19,10 @@
     content: '';
     display : block;
 
-    position: fixed;
+    position: absolute;
     inset : 20% -10% auto auto;
     z-index: 200;
-    
+
     rotate : -3deg;
     width : 50%;
     max-width : calc( var(--width-default) * 0.65 );
@@ -62,9 +62,13 @@
   font-size: var(--font-size-1);
 }
 
-.h1-highlight {
-  -webkit-text-stroke: 1px hsl( var(--clr-primary-7) );
-  color : transparent;
+@supports ( -webkit-text-stroke: 1px hsl( var(--clr-primary-7) ) ) {
+
+  .h1-highlight {
+    -webkit-text-stroke: 1px hsl( var(--clr-primary-7) );
+    color : transparent;
+  }
+
 }
 
 .hero-subheading {

@@ -1,24 +1,29 @@
+"use strict"
+
+// Mobile Menu Button
+
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn')
+const body = document.body
+
+mobileMenuBtn.addEventListener('click', () => {
+
+  if(body.classList.contains('mobile-menu-is-active')) {
+    body.classList.remove('mobile-menu-is-active')
+  } else {
+    body.classList.add('mobile-menu-is-active')
+  }
+
+})
 
 
-// Hero inverted bg disappearing act
+// Mobile Menu Links
+const navLinks = document.querySelectorAll('.nav-link')
 
-// const heroBg = document.querySelector('.hero-wrapper-bg')
-
-// window.addEventListener('scroll', () => {
-//   console.log('hi')
-//   amount = 1 - (scrollY / screen.height) * 3
-  
-//   if (amount >= 0.1) {
-//     heroBg.style.transform = `translate(-0%, -50%) scale(${amount})`
-//   } 
-  
-//   if (amount < 0.2) {
-//     heroBg.style.transform = `translate(-0%, -50%) scale(0)`
-//   }
-// })
-
-
-
+navLinks.forEach( link => {
+  link.addEventListener('click', () => {
+    body.classList.remove('mobile-menu-is-active')
+  })
+})
 
 
 // Nav Custom Cursor thingy
@@ -35,9 +40,6 @@ mainNav.addEventListener('mouseout', () => {
   menuHighlight.style.top = '-10vh'
   menuHighlight.style.left = '-10vw'
 })
-
-
-
 
 
 
@@ -94,4 +96,46 @@ const portfolioObserver = new IntersectionObserver( function(entries, observer) 
 
 portfolioObserver.observe(portfolioAccordion)
 
+
+
+// Email Handler
+
+const emailForm = document.querySelector('#email-form') 
+const emailResponse = document.querySelector('#email-response')
+
+emailForm.addEventListener( 'submit', e => sendEmail(e) )
+
+async function sendEmail(e) {
+  e.preventDefault()
+  emailResponse.innerHTML = `
+  <img src='./img/icons/email-loading.svg' alt="">
+  Sending...
+  `
+
+  const data = {
+    name : e.target.name.value,
+    email : e.target.email.value,
+    phone : e.target.phone.value,
+    message : e.target.message.value
+  }
+
+  const postReqOptions = {
+    method : 'POST',
+    headers : { 'Content-Type': 'application/json' },
+    body : JSON.stringify(data)
+  }
+
+  try {
+
+    const res = await fetch('./email-handler.php', postReqOptions)
+    const json = await res.json()
+
+    emailResponse.innerHTML = json.type === 'success'
+      ? `Email sent. Thanks ${json.name}!`
+      : 'Something went wrong, try again'
+    
+  } catch(e) {
+    console.log('There was an error', e)
+  }
+}
 

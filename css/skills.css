@@ -13,9 +13,9 @@
 
 @media screen and (min-width : 700px) {
   .skill-list {
-    word-spacing: 1rem;
+    white-space: nowrap;
   }
-  
+
   .skill-list::after {
     content: attr(data-skill-list);
   }

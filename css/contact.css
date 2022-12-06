@@ -63,3 +63,9 @@
   align-items: center;
   row-gap: 2rem;
 }
+
+#email-response {
+  display : flex;
+  align-items: center;
+  gap : 1rem;
+}
