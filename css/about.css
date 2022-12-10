@@ -7,7 +7,7 @@
 .about-intro p {
   position: relative;
   margin-block : 4rem;
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-3);
   line-height: calc( var(--font-size-4) + 0.5rem);
   color : hsl( var(--clr-primary-6) );
 
