@@ -17,20 +17,35 @@
   font-family: var(--font-default);
   font-size: var(--font-size-1);
   font-weight : 600;
+  margin-bottom : 0.5rem;
+}
+
+.course-list h4 {
+  font-family: var(--font-default);
 }
 
 .course-desc {
   display : block;
-  margin-top : 1rem;
+  margin-bottom : 1.5rem;
   color : hsl( var(--clr-primary-4) );
+}
+
+.classes {
+  padding : 2rem;
+  background-color: hsl( var(--clr-primary-2) );
 }
 
 @media screen and (min-width : 700px) {
     .course-list {
       display : grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
       column-gap: 3rem;
       row-gap: 3rem;
+    }
+
+    .classes {
+      grid-column: 3;
+      grid-row : 1 / span 2;
     }
 }
