@@ -7,19 +7,8 @@
   overflow: hidden;
 }
 .skill-list {
-  max-width: 50ch;
-  text-align: center;
+  max-width: 40ch;
   word-spacing: 2rem;
   line-height: 3rem;
   font-size: var(--font-size-2);
-}
-
-@media screen and (min-width : 700px) {
-  .skill-list {
-    /* white-space: nowrap; */
-  }
-
-  .skill-list::after {
-    content: attr(data-skill-list);
-  }
 }

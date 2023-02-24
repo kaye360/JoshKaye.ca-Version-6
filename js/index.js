@@ -42,60 +42,14 @@ mainNav.addEventListener('mouseout', () => {
 })
 
 
+// Hero Wrapper BG
 
-// Portfolio Accordion
-
-const portfolioItems = document.querySelectorAll('.portfolio-item')
-
-const maxHeight = getComputedStyle(
-  document.querySelector('.portfolio-accordion') 
-).getPropertyValue('--max-height')
-
-portfolioItems.forEach( item => {
-  item.addEventListener('click', () => showPortfolioItem(item) )
-}) 
-
-function showPortfolioItem(currentItem) {
-
-  if( currentItem.classList.contains('portfolio-item-active') ) {
-    currentItem.classList.remove('portfolio-item-active')
-    return
-  }
-
-  portfolioItems.forEach( item => {
-    item.classList.remove('portfolio-item-active')
-  } )
-
-  currentItem.classList.add('portfolio-item-active')
-}
-
-
-
-
-// Portfolio item animations
-
-const portfolioAccordion = document.querySelector('.portfolio-accordion')
-
-
-const portolioObserverOptions = {
-  root : null,
-  threshold : 0,
-  rootMargin : "5% 0px 0px 0px"
-}
-
-const portfolioObserver = new IntersectionObserver( function(entries, observer) {
-  entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        portfolioAccordion.classList.add('portfolio-accordion-animate')
-      } else {
-        portfolioAccordion.classList.remove('portfolio-accordion-animate')
-      }
-      
-  })
-}, portolioObserverOptions)
-
-portfolioObserver.observe(portfolioAccordion)
-
+const heroBG = document.querySelector('.hero-wrapper-bg')
+document.addEventListener('scroll', () => {
+  if(scrollY > 1000) return
+  const scale = `${1 + scrollY / 300}`
+  heroBG.style.transform = `scale(${scale})`
+})
 
 
 // Email Handler

@@ -20,7 +20,7 @@
     display : block;
 
     position: absolute;
-    inset : 20% -10% auto auto;
+    inset : 20% -20% auto auto;
     z-index: 200;
 
     rotate : -3deg;
@@ -30,7 +30,7 @@
   
     backdrop-filter: invert(100);
   
-    animation : hero-wrapper-bg 200ms var(--cubic-bez) both;
+    animation : hero-wrapper-bg 400ms var(--cubic-bez) both;
   }
   
 }
@@ -56,6 +56,10 @@
     grid-template-columns: 1fr 1fr;
   }
   
+}
+
+.hero-main-heading {
+  font-family: 'Poppins';
 }
 
 .hero-main-heading-small {
@@ -117,13 +121,13 @@
 }
 
 .slide-left {
-  animation: slide-left 500ms var(--cubic-bez) 400ms both;
+  animation: slide-left 700ms var(--cubic-bez) 400ms both;
 }
 
 @keyframes slide-left {
   from {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(100%) rotate(10deg);
   }
   to {
     opacity: 1;

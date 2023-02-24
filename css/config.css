@@ -46,7 +46,7 @@
   --font-size-7 : clamp(2.25rem, 7vw, 5rem);
 
   /* Global/Default Elements */
-  --font-default : Poppins, Helvetica, Arial, sans-serif;
+  --font-default : 'Hanken Grotesk', Poppins, Helvetica, Arial, sans-serif;
 
   /* Margin/Padding defaults */
   --padding-x-default : 2vw;

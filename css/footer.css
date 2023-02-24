@@ -1,6 +1,5 @@
 footer {
   padding-block : 4rem;
-  margin-bottom : 5rem;
   background-color: hsl( var(--clr-primary-6) );
   color: hsl( var(--clr-primary-3) );
   text-align: center;

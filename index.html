@@ -95,39 +95,30 @@
 
     <ul class="menu">
       <li>
-        <a 
-          href="#home" 
-          class="nav-link" 
-          data-scroll-to>
-            home
+        <a href="#home" class="nav-link">
+          home
         </a>
       </li>
       <li>
-        <a  
-          href="#portfolio" 
-          class="nav-link" 
-          data-scroll-to 
-          data-scroll-offset="-150px">
-            portfolio
+        <a href="#portfolio" class="nav-link">
+          portfolio
         </a>
       </li>
       <li>
-        <a  
-          href="#about"
-          class="nav-link" 
-          data-scroll-to
-          data-scroll-offset="-150px">
-            about
+        <a href="#about" class="nav-link">
+          about
         </a>
       </li>
       <li>
-        <a 
-          href="#contact"
-          class="nav-link" 
-          data-scroll-to
-          data-scroll-offset="-150px">
-            contact
-        </a></li>
+        <a href="resume.pdf" class="nav-link">
+          resume
+        </a>
+      </li>
+      <li>
+        <a href="#contact" class="nav-link">
+          contact
+        </a>
+      </li>
     </ul>
 
   </div>
@@ -232,6 +223,74 @@
 
     <div class="portfolio-accordion container">
 
+      <!-- Item BookStack -->
+      <div class="portfolio-item portfolio-item-active">
+
+        
+        <div class="portfolio-item-description">
+          
+          <h3>BookStack (Featured)</h3>
+
+          <span class="portfolio-item-subheading">Personal Library Web App</span>
+
+          <p>
+            Full-Stack, React, TypeScript, PHP, MYSQL, Tailwind
+          </p>
+
+          <p>
+            This web app has the following notable features:
+          </p>
+
+          <ul>
+            <li>Custom, responsive tailwind layout with light/dark mode</li>
+            <li>React User Interface with custom hooks, React Router, and Tanstack Queries</li>
+            <li>User notifications and a community feed showing user activity</li>
+            <li>User signup, login, and authentication</li>
+            <li><strong>Custom REST API and router</strong> with user defined routes</li>
+            <li>Backend database class to build queries efficiently</li>
+            <li>GitHub Actions for automatic continuous deployment</li>
+          </ul>
+
+          <div class="portfolio-item-links">
+            <a href="https://bookstack.joshkaye.ca/" class="btn" target="_blank">Project Demo</a>
+            <a href="https://github.com/kaye360/bookstack-v2"          class="btn" target="_blank">Repo</a>
+          </div>
+
+        </div>
+
+        <img src="./img/portfolio/bookstack.png" alt="App Screenshot" class="portfolio-item-img" width="483" height="365">
+
+      </div>
+
+      <!-- Item 2 Space App -->
+      <div class="portfolio-item">
+
+        
+        <div class="portfolio-item-description" id="space-app">
+          
+          <h3>Space App</h3>
+
+          <span class="portfolio-item-subheading">Solar System Web App</span>
+
+          <p>
+            React, TypeScript, Tailwind
+          </p>
+
+          <p>
+            This mini app fetches info from the Solar System OpenData API and features a custom UI for browsing information about each planet. The UI animations were made custom with CSS.
+          </p>
+
+          <div class="portfolio-item-links">
+            <a href="https://joshs-space-app.netlify.app/" class="btn" target="_blank">Project Demo</a>
+            <a href="https://github.com/kaye360/space-app" class="btn" target="_blank">Repo</a>
+          </div>
+
+        </div>
+
+        <img src="./img/portfolio/space-app.png" alt="App Screenshot" class="portfolio-item-img">
+
+      </div>
+
       <!-- Item 1 Spendly -->
       <div class="portfolio-item">
 
@@ -241,6 +300,10 @@
           <h3>Spendly</h3>
 
           <span class="portfolio-item-subheading">Money Tracking Web App</span>
+
+          <p>
+            Full-Stack, PHP, MYSQL, react, javascript, CSS
+          </p>
 
           <p>
             Spendly is a custom Full-Stack web app that I've programmed from the ground up. It features a front-end UI made with React, and a backend with PHP and MYSQL.
@@ -261,46 +324,11 @@
 
         </div>
 
-        <button class="portfolio-item-btn">
-          <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
-        </button>
-
         <img src="./img/portfolio/spendly.png" alt="App Screenshot" class="portfolio-item-img">
 
       </div>
 
-      <!-- Item 2 BookStack -->
-      <div class="portfolio-item">
 
-        
-        <div class="portfolio-item-description">
-          
-          <h3>BookStack</h3>
-
-          <span class="portfolio-item-subheading">Personal Library Web App</span>
-
-          <p>
-            BookStack is a custom Full-Stack web app that I programmed from the ground up.
-          </p>
-
-          <p>
-            It features a front-end UI made with React, and a backend with PHP and MYSQL. Book data is fetched from the Google Books API.
-          </p>
-
-          <div class="portfolio-item-links">
-            <a href="https://joshkaye.ca/projects/bookstack-app/build/" class="btn" target="_blank">Project Demo</a>
-            <a href="https://github.com/kaye360/BookStack-App"          class="btn" target="_blank">Repo</a>
-          </div>
-
-        </div>
-
-        <button class="portfolio-item-btn">
-          <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
-        </button>
-
-        <img src="./img/portfolio/bookstack.png" alt="App Screenshot" class="portfolio-item-img">
-
-      </div>
 
       <!-- Item 3 Vitality Fitness -->
       <div class="portfolio-item">
@@ -311,6 +339,10 @@
           <h3>Vitality Fitness</h3>
 
           <span class="portfolio-item-subheading">Personal Trainer Wordpress Site</span>
+
+          <p>
+            HTML, CSS, Wordpress, PHP
+          </p>
 
           <p>
             For this project, I worked with the client, Nola, to identify her business goals for her website. 
@@ -325,10 +357,6 @@
           </div>
 
         </div>
-
-        <button class="portfolio-item-btn">
-          <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
-        </button>
 
         <img src="./img/portfolio/vitality-fitness.png" alt="Site Screenshot" class="portfolio-item-img">
 
@@ -345,6 +373,10 @@
           <span class="portfolio-item-subheading">Local Biking/Beer Group</span>
 
           <p>
+            HTML, CSS, Wordpress, PHP
+          </p>
+
+          <p>
             For this project, I worked with the client, Bill, to create website for a local cycling and brewery group. 
           </p>
 
@@ -358,44 +390,7 @@
 
         </div>
 
-        <button class="portfolio-item-btn">
-          <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
-        </button>
-
         <img src="./img/portfolio/bikes-and-brews.png" alt="Site Screenshot" class="portfolio-item-img">
-
-      </div>
-
-      <!-- Item 5 Task Manager -->
-      <div class="portfolio-item">
-
-        
-        <div class="portfolio-item-description">
-          
-          <h3>Task Manager</h3>
-
-          <span class="portfolio-item-subheading">Todo List React App</span>
-
-          <p>
-            Because every web developer has at least one.
-          </p>
-
-          <p>
-            This simple, light weight task manager stores, organizes, and keeps track of your personal todo list in the form of a React single page web app.
-          </p>
-
-          <div class="portfolio-item-links">
-            <a href="https://jkaye-taskmanager.netlify.app/"                class="btn" target="_blank">Project demo</a>
-            <a href="https://github.com/kaye360/Task-Manager/tree/main/src" class="btn" target="_blank">Repo</a>
-          </div>
-
-        </div>
-
-        <button class="portfolio-item-btn">
-          <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
-        </button>
-
-        <img src="./img/portfolio/task-manager.png" alt="App Screenshot" class="portfolio-item-img">
 
       </div>
 
@@ -405,7 +400,7 @@
         
         <div class="portfolio-item-description">
           
-          <h3>GitHub Projects</h3>
+          <h3>More GitHub Projects</h3>
 
           <span class="portfolio-item-subheading">More projects of mine</span>
 
@@ -418,10 +413,6 @@
           </div>
 
         </div>
-
-        <button class="portfolio-item-btn">
-          <img src="./img/icons/down-arrow-circled.svg" alt="Expand">
-        </button>
 
         <img src="./img/portfolio/github.png" alt="App Screenshot" class="portfolio-item-img">
 
@@ -438,10 +429,9 @@
       <div class="skill-list-wrapper container">
 
         <div class="skill-list" 
-          data-scroll data-scroll-direction="horizontal" data-scroll-speed="2"
-          data-skill-list="
-            ">
-            html css tailwind javascript react node/express mongoDB php mysql laravel wordpress git figma
+          data-scroll data-scroll-direction="horizontal" data-scroll-speed="3"
+        >
+            html css tailwind javascript typescript react node/express mongoDB php mysql laravel git figma
         </div>      
 
       </div>
@@ -480,14 +470,14 @@
         data-scroll-speed="2"
       >
 
-        <h3 class="my2">what i do</h3>
+        <h3>what i do</h3>
 
         <p>
           The internet is always in a state of change; keeping on top of these changes has been an exciting hobby for me since the early 2000's.
         </p>
 
         <p>
-          With a strong understanding of HTML, CSS, and JavaScript combined with experience and fascination with modern web development tools, I can be a valuable member of your team.
+          With a strong understanding of HTML, CSS, Tailwind, PHP, JavaScript, and React combined with experience and fascination with modern web development tools, I can be a valuable member of your team.
         </p>
 
       </div> <!-- about content 1 -->
@@ -501,11 +491,16 @@
         <h3>a little bit about me</h3>
 
         <p>
-          I was born and raised in Langley, BC. In the early 2000's during highschool, I taught myself how to code websites from scratch. Between 2011 and 2022 I had a successful career as a Journeyman Electrician, wiring everything imaginable including small condos, apartment buildings, and industrial food production plants.
+          I was born and raised in Langley, BC. In the early 2000's during highschool, I taught myself how to code websites from scratch. Between 2011 and 2023 I had a successful career as a Journeyman Electrician, wiring everything imaginable including small condos, apartment buildings, and industrial food production plants.
         </p>
 
         <p>
-          Recently, I've found myself rediscovering my fascination with website design and development. I currently reside in Port Coquitlam with my wife. In my spare time you will find me hiking, skateboarding, snowboarding or searching for the perfect IPA and the nearest brewery.
+          Recently, I've found myself rediscovering my fascination with website design and development. I have developed multiple personal projects and projects for others.
+          
+        </p>
+
+        <p>
+          I currently reside in Port Coquitlam with my wife. In my spare time you will find me hiking, skateboarding, snowboarding or searching for the perfect IPA and the nearest brewery.
         </p>
 
       </div> <!-- about-content-2 -->
@@ -693,21 +688,21 @@
 
 
 
-<footer data-scroll-section>
-  &copy; copyright 2022 joshkaye.ca
+<footer data-scroll-section data scroll>
+  &copy; copyright 2023 joshkaye.ca
 </footer>
 
 
 
-<script src="./js/locomotive-scroll.min.js"></script>
+<!-- <script src="./js/locomotive-scroll.min.js"></script>
 <script>
     (function () {
       const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true,
-});
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+      });
     })();
-</script>
+</script> -->
 
 
 <!-- Default Statcounter code for JoshKaye.ca
